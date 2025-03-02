@@ -142,6 +142,14 @@ export function MainNav() {
             </NavigationMenuLink>
           </Link>
         </NavigationMenuItem>
+
+        <NavigationMenuItem>
+          <Link href="/contact" legacyBehavior passHref>
+            <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+              Contact
+            </NavigationMenuLink>
+          </Link>
+        </NavigationMenuItem>
       </NavigationMenuList>
     </NavigationMenu>
   );
@@ -284,6 +292,16 @@ export function MobileNav({ onCloseAction }: { onCloseAction: () => void }) {
             onClick={onCloseAction}
           >
             Uzbekistan
+          </Link>
+        </li>
+
+        <li>
+          <Link
+            href="/contact"
+            className="block text-white hover:text-emerald-300"
+            onClick={onCloseAction}
+          >
+            Contact
           </Link>
         </li>
       </ul>
