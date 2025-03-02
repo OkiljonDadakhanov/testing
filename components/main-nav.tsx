@@ -16,7 +16,7 @@ import { cn } from "@/lib/utils";
 const competitionItems = [
   {
     title: "Participation Requirements",
-    href: "/competition/requirements",
+    href: "/requirements",
   },
   {
     title: "Past ARBICHO",
