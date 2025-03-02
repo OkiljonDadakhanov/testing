@@ -147,7 +147,7 @@ export function MainNav() {
   );
 }
 
-export function MobileNav({ onClose }: { onClose: () => void }) {
+export function MobileNav({ onCloseAction }: { onCloseAction: () => void }) {
   const [openSubmenu, setOpenSubmenu] = useState<string | null>(null);
 
   return (
@@ -157,7 +157,7 @@ export function MobileNav({ onClose }: { onClose: () => void }) {
           <Link
             href="/"
             className="block text-white hover:text-emerald-300"
-            onClick={onClose}
+            onClick={onCloseAction}
           >
             Home
           </Link>
@@ -166,7 +166,7 @@ export function MobileNav({ onClose }: { onClose: () => void }) {
           <Link
             href="/about"
             className="block text-white hover:text-emerald-300"
-            onClick={onClose}
+            onClick={onCloseAction}
           >
             About ARBICHO
           </Link>
@@ -192,7 +192,7 @@ export function MobileNav({ onClose }: { onClose: () => void }) {
                   <Link
                     href={item.href}
                     className="block text-white hover:text-emerald-300"
-                    onClick={onClose}
+                    onClick={onCloseAction}
                   >
                     {item.title}
                   </Link>
@@ -205,7 +205,7 @@ export function MobileNav({ onClose }: { onClose: () => void }) {
           <Link
             href="/arbicho-foundation"
             className="block text-white hover:text-emerald-300"
-            onClick={onClose}
+            onClick={onCloseAction}
           >
             ARBICHO Foundation
           </Link>
@@ -229,7 +229,7 @@ export function MobileNav({ onClose }: { onClose: () => void }) {
                   <Link
                     href={item.href}
                     className="block text-white hover:text-emerald-300"
-                    onClick={onClose}
+                    onClick={onCloseAction}
                   >
                     {item.title}
                   </Link>
@@ -242,7 +242,7 @@ export function MobileNav({ onClose }: { onClose: () => void }) {
           <Link
             href="/gallery"
             className="block text-white hover:text-emerald-300"
-            onClick={onClose}
+            onClick={onCloseAction}
           >
             Gallery
           </Link>
@@ -268,7 +268,7 @@ export function MobileNav({ onClose }: { onClose: () => void }) {
                   <Link
                     href={item.href}
                     className="block text-white hover:text-emerald-300"
-                    onClick={onClose}
+                    onClick={onCloseAction}
                   >
                     {item.title}
                   </Link>
@@ -281,7 +281,7 @@ export function MobileNav({ onClose }: { onClose: () => void }) {
           <Link
             href="/uzbekistan"
             className="block text-white hover:text-emerald-300"
-            onClick={onClose}
+            onClick={onCloseAction}
           >
             Uzbekistan
           </Link>
