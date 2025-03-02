@@ -26,7 +26,7 @@ export default function Hero() {
         <div className="animate-float absolute bottom-20 left-[20%] h-20 w-20 rounded-full border-2 border-cyan-400/30 bg-cyan-500/10 shadow-[0_0_15px_rgba(34,211,238,0.2)]" />
       </div>
 
-      <div className="container relative mx-auto px-4 py-20 sm:px-6 lg:px-8">
+      <div className="container relative mx-auto px-6 md:px-12 lg:px-16 py-20 flex justify-center">
         <div className="lg:grid lg:grid-cols-2 lg:gap-8">
           <div className="flex flex-col justify-center space-y-8">
             <div className="space-y-6">

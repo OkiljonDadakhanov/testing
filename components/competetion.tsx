@@ -1,11 +1,26 @@
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
-import { ArrowRight, Trophy, Users, GraduationCap, ClipboardCheck } from "lucide-react"
+import { Button } from "@/components/ui/button";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import {
+  ArrowRight,
+  Trophy,
+  Users,
+  GraduationCap,
+  ClipboardCheck,
+} from "lucide-react";
 
 export function CompetitionSection() {
   return (
-    <section className="relative w-full bg-gradient-to-b from-[#011c2c] to-emerald-950/90 py-20" id="competition">
+    <section
+      className="relative w-full bg-gradient-to-b from-[#011c2c] to-emerald-950/90 py-20"
+      id="competition"
+    >
       {/* Background elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute left-0 top-0 -translate-x-1/2 translate-y-1/2 h-96 w-96 rounded-full bg-emerald-500/5 blur-3xl" />
@@ -25,14 +40,16 @@ export function CompetitionSection() {
             Competition Categories & Rounds
           </h2>
           <p className="text-emerald-100/80">
-            A comprehensive international chemistry competition designed to challenge and inspire young minds across
-            different levels.
+            A comprehensive international chemistry competition designed to
+            challenge and inspire young minds across different levels.
           </p>
         </div>
 
         {/* Age Categories */}
         <div className="mb-16">
-          <h3 className="mb-8 text-2xl font-semibold text-white">Age Categories</h3>
+          <h3 className="mb-8 text-2xl font-semibold text-white">
+            Age Categories
+          </h3>
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             <Card className="border-emerald-800/20 bg-emerald-900/10 backdrop-blur">
               <CardHeader>
@@ -40,10 +57,13 @@ export function CompetitionSection() {
                   <Users className="h-5 w-5 text-emerald-400" />
                   Junior Division
                 </CardTitle>
-                <CardDescription className="text-emerald-100/70">Ages 14-15</CardDescription>
+                <CardDescription className="text-emerald-100/70">
+                  Ages 14-15
+                </CardDescription>
               </CardHeader>
               <CardContent className="text-emerald-100/80">
-                Perfect for young chemistry enthusiasts starting their scientific journey.
+                Perfect for young chemistry enthusiasts starting their
+                scientific journey.
               </CardContent>
             </Card>
             <Card className="border-emerald-800/20 bg-emerald-900/10 backdrop-blur">
@@ -52,7 +72,9 @@ export function CompetitionSection() {
                   <GraduationCap className="h-5 w-5 text-emerald-400" />
                   Senior Division
                 </CardTitle>
-                <CardDescription className="text-emerald-100/70">Ages 16-17</CardDescription>
+                <CardDescription className="text-emerald-100/70">
+                  Ages 16-17
+                </CardDescription>
               </CardHeader>
               <CardContent className="text-emerald-100/80">
                 For advanced students ready to tackle complex chemical concepts.
@@ -64,7 +86,9 @@ export function CompetitionSection() {
                   <Trophy className="h-5 w-5 text-emerald-400" />
                   Advanced Division
                 </CardTitle>
-                <CardDescription className="text-emerald-100/70">Ages 18-19</CardDescription>
+                <CardDescription className="text-emerald-100/70">
+                  Ages 18-19
+                </CardDescription>
               </CardHeader>
               <CardContent className="text-emerald-100/80">
                 Designed for exceptional students pursuing chemistry excellence.
@@ -75,7 +99,9 @@ export function CompetitionSection() {
 
         {/* Competition Rounds */}
         <div className="mb-16">
-          <h3 className="mb-8 text-2xl font-semibold text-white">Competition Rounds</h3>
+          <h3 className="mb-8 text-2xl font-semibold text-white">
+            Competition Rounds
+          </h3>
           <div className="relative">
             <div className="absolute left-8 top-0 bottom-0 w-px bg-emerald-800/20 md:left-1/2" />
             <div className="space-y-8">
@@ -89,8 +115,12 @@ export function CompetitionSection() {
                 <div className="ml-16 md:ml-0 md:mr-[50%] md:pr-8">
                   <Card className="border-emerald-800/20 bg-emerald-900/10 backdrop-blur">
                     <CardHeader>
-                      <CardTitle className="text-emerald-100">Local Round</CardTitle>
-                      <CardDescription className="text-emerald-100/70">School/Regional Level</CardDescription>
+                      <CardTitle className="text-emerald-100">
+                        Local Round
+                      </CardTitle>
+                      <CardDescription className="text-emerald-100/70">
+                        School/Regional Level
+                      </CardDescription>
                     </CardHeader>
                     <CardContent>
                       <ul className="list-disc space-y-2 pl-4 text-emerald-100/80">
@@ -114,8 +144,12 @@ export function CompetitionSection() {
                 <div className="ml-16 md:ml-[50%] md:pl-8">
                   <Card className="border-emerald-800/20 bg-emerald-900/10 backdrop-blur">
                     <CardHeader>
-                      <CardTitle className="text-emerald-100">National Round</CardTitle>
-                      <CardDescription className="text-emerald-100/70">Country Level</CardDescription>
+                      <CardTitle className="text-emerald-100">
+                        National Round
+                      </CardTitle>
+                      <CardDescription className="text-emerald-100/70">
+                        Country Level
+                      </CardDescription>
                     </CardHeader>
                     <CardContent>
                       <ul className="list-disc space-y-2 pl-4 text-emerald-100/80">
@@ -138,8 +172,12 @@ export function CompetitionSection() {
                 <div className="ml-16 md:ml-0 md:mr-[50%] md:pr-8">
                   <Card className="border-emerald-800/20 bg-emerald-900/10 backdrop-blur">
                     <CardHeader>
-                      <CardTitle className="text-emerald-100">International Final</CardTitle>
-                      <CardDescription className="text-emerald-100/70">Global Championship</CardDescription>
+                      <CardTitle className="text-emerald-100">
+                        International Final
+                      </CardTitle>
+                      <CardDescription className="text-emerald-100/70">
+                        Global Championship
+                      </CardDescription>
                     </CardHeader>
                     <CardContent>
                       <ul className="list-disc space-y-2 pl-4 text-emerald-100/80">
@@ -158,7 +196,9 @@ export function CompetitionSection() {
 
         {/* Scoring System */}
         <div id="scoring">
-          <h3 className="mb-8 text-2xl font-semibold text-white">Scoring System</h3>
+          <h3 className="mb-8 text-2xl font-semibold text-white">
+            Scoring System
+          </h3>
           <Card className="border-emerald-800/20 bg-emerald-900/10 backdrop-blur">
             <CardHeader>
               <CardTitle className="flex items-center gap-2 text-emerald-100">
@@ -169,7 +209,9 @@ export function CompetitionSection() {
             <CardContent>
               <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
                 <div className="space-y-2">
-                  <h4 className="font-medium text-emerald-100">Theoretical Knowledge</h4>
+                  <h4 className="font-medium text-emerald-100">
+                    Theoretical Knowledge
+                  </h4>
                   <ul className="list-disc space-y-1 pl-4 text-sm text-emerald-100/80">
                     <li>Multiple choice (30%)</li>
                     <li>Short answer (30%)</li>
@@ -177,7 +219,9 @@ export function CompetitionSection() {
                   </ul>
                 </div>
                 <div className="space-y-2">
-                  <h4 className="font-medium text-emerald-100">Practical Skills</h4>
+                  <h4 className="font-medium text-emerald-100">
+                    Practical Skills
+                  </h4>
                   <ul className="list-disc space-y-1 pl-4 text-sm text-emerald-100/80">
                     <li>Laboratory technique (40%)</li>
                     <li>Data analysis (30%)</li>
@@ -185,7 +229,9 @@ export function CompetitionSection() {
                   </ul>
                 </div>
                 <div className="space-y-2">
-                  <h4 className="font-medium text-emerald-100">Research & Innovation</h4>
+                  <h4 className="font-medium text-emerald-100">
+                    Research & Innovation
+                  </h4>
                   <ul className="list-disc space-y-1 pl-4 text-sm text-emerald-100/80">
                     <li>Project presentation (40%)</li>
                     <li>Methodology (30%)</li>
@@ -205,6 +251,5 @@ export function CompetitionSection() {
         </div>
       </div>
     </section>
-  )
+  );
 }
-

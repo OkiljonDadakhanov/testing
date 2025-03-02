@@ -57,24 +57,28 @@ const infoCenterItems = [
 export function MainNav() {
   return (
     <NavigationMenu className="max-w-none justify-end">
-      <NavigationMenuList className="space-x-2">
-        <NavigationMenuItem>
+      <NavigationMenuList className="space-x-4">
+        <NavigationMenuItem className="px-1">
           <Link href="/" legacyBehavior passHref>
-            <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+            <NavigationMenuLink
+              className={cn(navigationMenuTriggerStyle(), "px-4")}
+            >
               Home
             </NavigationMenuLink>
           </Link>
         </NavigationMenuItem>
 
-        <NavigationMenuItem>
+        <NavigationMenuItem className="px-1">
           <Link href="/about" legacyBehavior passHref>
-            <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+            <NavigationMenuLink
+              className={cn(navigationMenuTriggerStyle(), "px-4")}
+            >
               About ARBICHO
             </NavigationMenuLink>
           </Link>
         </NavigationMenuItem>
 
-        <NavigationMenuItem>
+        <NavigationMenuItem className="px-1">
           <NavigationMenuTrigger>Competition</NavigationMenuTrigger>
           <NavigationMenuContent>
             <ul className="grid w-[400px] gap-3 p-4">
@@ -89,15 +93,17 @@ export function MainNav() {
           </NavigationMenuContent>
         </NavigationMenuItem>
 
-        <NavigationMenuItem>
+        <NavigationMenuItem className="px-1">
           <Link href="/arbicho-foundation" legacyBehavior passHref>
-            <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+            <NavigationMenuLink
+              className={cn(navigationMenuTriggerStyle(), "px-4")}
+            >
               ARBICHO Foundation
             </NavigationMenuLink>
           </Link>
         </NavigationMenuItem>
 
-        <NavigationMenuItem>
+        <NavigationMenuItem className="px-1">
           <NavigationMenuTrigger>Info Center</NavigationMenuTrigger>
           <NavigationMenuContent>
             <ul className="grid w-[400px] gap-3 p-4">
@@ -112,15 +118,17 @@ export function MainNav() {
           </NavigationMenuContent>
         </NavigationMenuItem>
 
-        <NavigationMenuItem>
+        <NavigationMenuItem className="px-1">
           <Link href="/gallery" legacyBehavior passHref>
-            <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+            <NavigationMenuLink
+              className={cn(navigationMenuTriggerStyle(), "px-4")}
+            >
               Gallery
             </NavigationMenuLink>
           </Link>
         </NavigationMenuItem>
 
-        <NavigationMenuItem>
+        <NavigationMenuItem className="px-1">
           <NavigationMenuTrigger>ARBICHO 2025</NavigationMenuTrigger>
           <NavigationMenuContent>
             <ul className="grid w-[400px] gap-3 p-4">
@@ -135,17 +143,21 @@ export function MainNav() {
           </NavigationMenuContent>
         </NavigationMenuItem>
 
-        <NavigationMenuItem>
+        <NavigationMenuItem className="px-1">
           <Link href="/uzbekistan" legacyBehavior passHref>
-            <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+            <NavigationMenuLink
+              className={cn(navigationMenuTriggerStyle(), "px-4")}
+            >
               Uzbekistan
             </NavigationMenuLink>
           </Link>
         </NavigationMenuItem>
 
-        <NavigationMenuItem>
+        <NavigationMenuItem className="px-1">
           <Link href="/contact" legacyBehavior passHref>
-            <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+            <NavigationMenuLink
+              className={cn(navigationMenuTriggerStyle(), "px-4")}
+            >
               Contact
             </NavigationMenuLink>
           </Link>
@@ -159,9 +171,9 @@ export function MobileNav({ onCloseAction }: { onCloseAction: () => void }) {
   const [openSubmenu, setOpenSubmenu] = useState<string | null>(null);
 
   return (
-    <nav className="p-4">
-      <ul className="space-y-4">
-        <li>
+    <nav className="p-6">
+      <ul className="space-y-6">
+        <li className="py-2">
           <Link
             href="/"
             className="block text-white hover:text-emerald-300"
@@ -170,7 +182,7 @@ export function MobileNav({ onCloseAction }: { onCloseAction: () => void }) {
             Home
           </Link>
         </li>
-        <li>
+        <li className="py-2">
           <Link
             href="/about"
             className="block text-white hover:text-emerald-300"
@@ -179,7 +191,7 @@ export function MobileNav({ onCloseAction }: { onCloseAction: () => void }) {
             About ARBICHO
           </Link>
         </li>
-        <li>
+        <li className="py-2">
           <button
             onClick={() =>
               setOpenSubmenu(
@@ -209,7 +221,7 @@ export function MobileNav({ onCloseAction }: { onCloseAction: () => void }) {
             </ul>
           )}
         </li>
-        <li>
+        <li className="py-2">
           <Link
             href="/arbicho-foundation"
             className="block text-white hover:text-emerald-300"
@@ -218,7 +230,7 @@ export function MobileNav({ onCloseAction }: { onCloseAction: () => void }) {
             ARBICHO Foundation
           </Link>
         </li>
-        <li>
+        <li className="py-2">
           <button
             onClick={() =>
               setOpenSubmenu(openSubmenu === "infoCenter" ? null : "infoCenter")
@@ -246,7 +258,7 @@ export function MobileNav({ onCloseAction }: { onCloseAction: () => void }) {
             </ul>
           )}
         </li>
-        <li>
+        <li className="py-2">
           <Link
             href="/gallery"
             className="block text-white hover:text-emerald-300"
@@ -255,7 +267,7 @@ export function MobileNav({ onCloseAction }: { onCloseAction: () => void }) {
             Gallery
           </Link>
         </li>
-        <li>
+        <li className="py-2">
           <button
             onClick={() =>
               setOpenSubmenu(
@@ -285,7 +297,7 @@ export function MobileNav({ onCloseAction }: { onCloseAction: () => void }) {
             </ul>
           )}
         </li>
-        <li>
+        <li className="py-2">
           <Link
             href="/uzbekistan"
             className="block text-white hover:text-emerald-300"
@@ -295,7 +307,7 @@ export function MobileNav({ onCloseAction }: { onCloseAction: () => void }) {
           </Link>
         </li>
 
-        <li>
+        <li className="py-2">
           <Link
             href="/contact"
             className="block text-white hover:text-emerald-300"
@@ -314,7 +326,7 @@ const ListItem = React.forwardRef<
   React.ComponentPropsWithoutRef<"a">
 >(({ className, title, children, href, ...props }, ref) => {
   return (
-    <li>
+    <li className="py-2">
       <NavigationMenuLink asChild>
         <Link
           ref={ref}

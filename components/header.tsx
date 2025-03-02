@@ -1,5 +1,4 @@
 "use client";
-
 import { MainNav } from "@/components/main-nav";
 import Link from "next/link";
 import Image from "next/image";
@@ -16,29 +15,28 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-emerald-800/10 bg-gradient-to-b from-emerald-900/95 to-[#011c2c]/95 backdrop-blur supports-[backdrop-filter]:from-emerald-900/80 supports-[backdrop-filter]:to-[#011c2c]/80">
-      <div className="container flex h-16 items-center justify-between space-x-4 min-h-[120px] relative">
-        <div className="flex-shrink-0">
-          <Link href="/" className="flex items-center space-x-2">
-            <Image
-              src="/logo/logowhite.png"
-              width={60}
-              height={60}
-              alt="logo of ARBIChO"
-              className="w-auto h-auto"
-            />
-          </Link>
-        </div>
+      <div className="container flex items-center justify-between py-4 min-h-[120px] px-4 md:px-6">
+        {/* Logo on the Left */}
+        <Link href="/" className="flex items-center z-10">
+          <Image
+            src="/logo/logowhite.png"
+            width={100} // Adjust width as needed
+            height={64} // Adjust height as needed
+            alt="logo of ARBIChO"
+            className="object-contain"
+          />
+        </Link>
 
         {/* Mobile Menu Button */}
         <button
           onClick={() => setIsMenuOpen(!isMenuOpen)}
-          className="lg:hidden p-2 text-white hover:text-emerald-300"
+          className="lg:hidden p-2 text-white hover:text-emerald-300 z-10"
         >
           {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
 
         {/* Desktop Navigation */}
-        <div className="hidden lg:block">
+        <div className="hidden lg:flex lg:flex-1 lg:justify-end">
           <MainNav />
         </div>
 
