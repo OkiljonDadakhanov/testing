@@ -45,7 +45,7 @@ export function Header() {
         {/* Mobile Navigation */}
         {isMenuOpen && (
           <div className="absolute top-full left-0 right-0 bg-emerald-900/95 lg:hidden">
-            <MobileNav onClose={handleClose} />
+            <MobileNav onCloseAction={handleClose} />
           </div>
         )}
       </div>
