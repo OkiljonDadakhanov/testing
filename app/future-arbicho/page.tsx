@@ -394,7 +394,7 @@ export default function FutureARBIChOPage() {
                 <p className="text-emerald-100/80">
                   Uzbekistan, located in Central Asia, is a country with a rich
                   scientific heritage and a strong commitment to education. It
-                  is the birthplace of Abu Reikhan Beruniy, the renowned
+                  is the birthplace of Abu Rayhan Biruni, the renowned
                   polymath after whom our competition is named.
                 </p>
                 <p className="text-emerald-100/80">

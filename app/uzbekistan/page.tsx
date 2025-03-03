@@ -146,7 +146,7 @@ export default function UzbekistanPage() {
             </p>
             <p className="text-emerald-100/80">
               The region has been a center of scientific advancement, with
-              scholars like Abu Reikhan Beruniy, Avicenna (Ibn Sina), and
+              scholars like Abu Rayhan Biruni, Avicenna (Ibn Sina), and
               Al-Khwarizmi making groundbreaking contributions to mathematics,
               medicine, astronomy, and chemistry.
             </p>

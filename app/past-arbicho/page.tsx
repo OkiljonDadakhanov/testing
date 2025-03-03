@@ -153,7 +153,7 @@ export default function PastARBIChOPage() {
             Past ARBIChO Competitions
           </h1>
           <p className="mt-6 text-lg leading-8 text-emerald-100/80">
-            Explore the rich history of the Abu Reikhan Beruniy International
+            Explore the rich history of the Abu Rayhan Biruni International
             Chemistry Olympiad and its impact on young scientists worldwide
           </p>
         </div>
