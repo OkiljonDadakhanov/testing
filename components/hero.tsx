@@ -66,7 +66,7 @@ export default function Hero() {
             <div className="grid gap-6 sm:grid-cols-2">
               <div className="flex items-center gap-3 text-emerald-100/90">
                 <CalendarDays className="h-5 w-5 text-emerald-400" />
-                <span>June 01-08, 2025</span>
+                <span>May 28 to June 4, 2025</span>
               </div>
               <div className="flex items-center gap-3 text-emerald-100/90">
                 <Medal className="h-5 w-5 text-emerald-400" />
@@ -84,7 +84,7 @@ export default function Hero() {
             </div>
 
             <div className="flex flex-col gap-4 sm:flex-row">
-              <Link href="/about">
+              <Link href="#timeline">
               <Button
                 size="lg"
                 className="bg-emerald-500 text-white hover:bg-emerald-600 cursor-pointer"
@@ -92,6 +92,7 @@ export default function Hero() {
                 Register Now
               </Button>
               </Link>
+              <Link href="/about">
               <Button
                 size="lg"
                 variant="outline"
@@ -99,6 +100,7 @@ export default function Hero() {
               >
                 Learn More
               </Button>
+              </Link>
             </div>
           </div>
 

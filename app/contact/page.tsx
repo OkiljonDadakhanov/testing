@@ -15,23 +15,18 @@ import {
 
 const contacts = [
   {
-    name: "Dr. Sarah Chen",
-    role: "General Coordinator",
-    email: "sarah.chen@arbicho.com",
-    phone: "+998 71 234 5678",
+    name: "Murodbek Islamov",
+    role: "Contact person",
+    email: "info@olympcenter.uz",
+    phone: "+998 77 550 33 66",
   },
   {
-    name: "Prof. Alexander Ivanov",
-    role: "Academic Committee Chair",
-    email: "alexander.ivanov@arbicho.com",
-    phone: "+998 71 234 5679",
+    name: "Dadakhonov Okiljon",
+    role: "IT department",
+    email: "okiljondadakhonov@gmail.com",
+    phone: "+998 99 109 34 14",
   },
-  {
-    name: "Dr. Michael Rahman",
-    role: "Registration & Support",
-    email: "michael.rahman@arbicho.com",
-    phone: "+998 71 234 5680",
-  },
+
 ];
 
 const socialLinks = [
@@ -71,19 +66,12 @@ const offices = [
   {
     city: "Tashkent",
     country: "Uzbekistan",
-    address: "123 Science Avenue, Tashkent 100084",
-    phone: "+998 71 234 5678",
-    timezone: "UTC+5",
+    address: "100099, Otchopar-1, Darvozakent Street, House 60, Yunusobod District",
+    phone: "+998 77 550 33 66",
+    timezone: "GMT+5",
     hours: "Mon-Fri: 9:00 AM - 6:00 PM",
   },
-  {
-    city: "Almaty",
-    country: "Kazakhstan",
-    address: "456 Chemistry Street, Almaty 050000",
-    phone: "+7 727 345 6789",
-    timezone: "UTC+6",
-    hours: "Mon-Fri: 9:00 AM - 6:00 PM",
-  },
+ 
 ];
 
 export default function ContactPage() {
@@ -155,7 +143,7 @@ export default function ContactPage() {
           {/* Office Locations */}
           <Card className="border-emerald-800/20 bg-emerald-900/10 backdrop-blur">
             <CardHeader>
-              <CardTitle className="text-emerald-100">Our Offices</CardTitle>
+              <CardTitle className="text-emerald-100">Our Office</CardTitle>
             </CardHeader>
             <CardContent className="space-y-6">
               {offices.map((office) => (

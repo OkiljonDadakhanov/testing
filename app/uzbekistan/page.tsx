@@ -12,7 +12,7 @@ import {
   Globe,
 } from "lucide-react";
 import Image from "next/image";
-// import Link from "next/link";
+import Link from "next/link";
 
 export default function UzbekistanPage() {
   return (
@@ -74,7 +74,6 @@ export default function UzbekistanPage() {
               className="absolute inset-0 w-full h-full z-10"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-emerald-950/80 to-transparent" />
-           
           </div>
         </div>
 
@@ -154,7 +153,7 @@ export default function UzbekistanPage() {
           </div>
           <div className="relative h-[300px] rounded-xl overflow-hidden">
             <Image
-              src="/placeholder.svg?height=600&width=800"
+              src="/images/rich-history.jpg"
               alt="Historical Uzbekistan"
               fill
               className="object-cover"
@@ -173,19 +172,19 @@ export default function UzbekistanPage() {
             {[
               {
                 title: "Architecture",
-                image: "/placeholder.svg?height=400&width=600",
+                image: "/images/architechture.jpg",
                 description:
                   "Uzbekistan is renowned for its stunning Islamic architecture, featuring intricate blue-tiled domes, minarets, and madrasas. The historic centers of Samarkand, Bukhara, and Khiva are UNESCO World Heritage sites.",
               },
               {
                 title: "Arts & Crafts",
-                image: "/placeholder.svg?height=400&width=600",
+                image: "/images/arts.png",
                 description:
                   "Traditional crafts flourish in Uzbekistan, including silk weaving, carpet making, ceramics, and gold embroidery. Each region has its distinctive styles and techniques passed down through generations.",
               },
               {
                 title: "Music & Dance",
-                image: "/placeholder.svg?height=400&width=600",
+                image: "/images/music.png",
                 description:
                   "Uzbek music features unique instruments like the dutar (two-stringed lute) and doira (frame drum). Traditional dances celebrate nature, harvests, and historical events with colorful costumes and expressive movements.",
               },
@@ -263,7 +262,7 @@ export default function UzbekistanPage() {
                 </div>
                 <div className="relative h-[250px] rounded-xl overflow-hidden">
                   <Image
-                    src="/placeholder.svg?height=500&width=700"
+                    src="/images/food.jpg"
                     alt="Uzbek Cuisine"
                     fill
                     className="object-cover"
@@ -288,7 +287,7 @@ export default function UzbekistanPage() {
               <div className="grid gap-8 md:grid-cols-2 items-center">
                 <div className="relative h-[250px] rounded-xl overflow-hidden">
                   <Image
-                    src="/placeholder.svg?height=500&width=700"
+                    src="/images/education.jpg"
                     alt="Education in Uzbekistan"
                     fill
                     className="object-cover"
@@ -330,37 +329,37 @@ export default function UzbekistanPage() {
             {[
               {
                 name: "Samarkand",
-                image: "/placeholder.svg?height=400&width=600",
+                image: "/images/samarqand.webp",
                 description:
                   "Known as the 'Crossroads of Cultures,' Samarkand features the iconic Registan Square with its three magnificent madrasas and the stunning Shah-i-Zinda necropolis.",
               },
               {
                 name: "Bukhara",
-                image: "/placeholder.svg?height=400&width=600",
+                image: "/images/buxoro.jpg",
                 description:
                   "This ancient city boasts over 140 architectural monuments, including the Poi-Kalyan complex and the ancient trading domes that once bustled with silk road merchants.",
               },
               {
                 name: "Khiva",
-                image: "/placeholder.svg?height=400&width=600",
+                image: "/images/xiva.jpg",
                 description:
                   "A perfectly preserved walled city, Khiva's Itchan Kala (inner town) feels like stepping back in time with its mud-brick walls, minarets, and palaces.",
               },
               {
                 name: "Tashkent",
-                image: "/placeholder.svg?height=400&width=600",
+                image: "/images/tashkent.jpg",
                 description:
                   "The capital city blends Soviet-era architecture with modern developments and traditional Uzbek influences. Visit the Chorsu Bazaar and ride the ornate metro system.",
               },
               {
                 name: "Fergana Valley",
-                image: "/placeholder.svg?height=400&width=600",
+                image: "/images/valley.jpg",
                 description:
                   "Known for its fertile land and traditional silk production, the valley offers beautiful landscapes and insights into rural Uzbek life.",
               },
               {
                 name: "Aral Sea",
-                image: "/placeholder.svg?height=400&width=600",
+                image: "/images/aral.jpg",
                 description:
                   "Once the world's fourth-largest lake, the Aral Sea is now largely a desert. It offers a sobering but important environmental lesson.",
               },
@@ -482,15 +481,26 @@ export default function UzbekistanPage() {
             2025!
           </p>
           <div className="flex flex-col gap-4 sm:flex-row justify-center">
-            <Button className="bg-emerald-500 text-white hover:bg-emerald-600">
-              Explore Tourist Attractions
-            </Button>
-            <Button
-              variant="outline"
-              className="border-emerald-400/50 text-emerald-100 hover:bg-emerald-950/50 hover:text-emerald-50"
+            <Link
+              href="https://www.tripadvisor.com/Attractions-g293967-Activities-Uzbekistan.html"
+              passHref
+              target="_blank"
             >
-              Travel Tips
-            </Button>
+              <Button className="bg-emerald-500 text-white hover:bg-emerald-600 cursor-pointer">
+                Explore Tourist Attractions
+              </Button>
+            </Link>
+            <Link
+              href="http://lonelyplanet.com/articles/things-to-know-before-traveling-to-uzbekistan"
+              passHref
+              target="_blank"
+            >
+              <Button
+                className="border-emerald-400/50 text-emerald-100 hover:bg-emerald-950/50 hover:text-emerald-50 cursor-pointer"
+              >
+                Travel Tips
+              </Button>
+            </Link>
           </div>
         </div>
       </div>
