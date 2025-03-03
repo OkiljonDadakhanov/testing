@@ -338,9 +338,12 @@ export default function SchedulePage() {
             Have questions about the schedule or need assistance?
           </p>
           <div className="flex flex-col gap-4 sm:flex-row justify-center">
-            <Button className="bg-emerald-500 text-white hover:bg-emerald-600">
+            <Link href="/contact">
+             <Button className="bg-emerald-500 text-white hover:bg-emerald-600 cursor-pointer">
               Contact Organizing Committee
             </Button>
+            </Link>
+           
             <Button
               variant="outline"
               className="border-emerald-400/50 text-emerald-100 hover:bg-emerald-950/50 hover:text-emerald-50"

@@ -303,7 +303,7 @@ export default function AboutPage() {
                 >
                   <Button
                     variant="outline"
-                    className="border-emerald-400/50 text-emerald-100 hover:bg-emerald-950/50 hover:text-emerald-50"
+                    className="border-emerald-400/50 text-emerald-100 hover:bg-emerald-950/50 hover:text-emerald-50 cursor-pointer"
                   >
                     Learn More About Samarkand
                   </Button>
