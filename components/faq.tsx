@@ -9,46 +9,67 @@ import { HelpCircle } from 'lucide-react'
 
 const faqs = [
   {
-    question: "What is ARBIChO?",
-    answer: "ARBIChO (Abu Rayhan Biruni International Chemistry Olympiad) is a prestigious international chemistry competition that celebrates the legacy of Abu Rayhan Biruni while fostering scientific excellence among young chemists worldwide."
+    question: "What is the Abu Rayhan Biruni International Chemistry Olympiad (ARBIChO)?",
+    answer: "The International Abu Rayhan Biruni Chemistry Olympiad (ARBIChO) is a prestigious competition that brings together talented students from around the world to test their knowledge and skills in chemistry. It aims to promote scientific excellence and international collaboration."
   },
   {
-    question: "Who can participate in ARBIChO?",
-    answer: "Students aged 14-19 can participate in ARBIChO across three divisions: Junior (14-15), Senior (16-17), and Advanced (18-19). Participants must be enrolled in a secondary education institution during the competition year."
+    question: "When and where will the Olympiad take place?",
+    answer: "The 2nd ARBIChO will be held in Tashkent, Uzbekistan, from June 1 to June 8, 2025."
   },
   {
-    question: "How does the registration process work?",
-    answer: "Registration opens on January 15, 2024. Students can register through their schools or individually through our online platform. Early bird registration is available with special rates. The registration deadline is February 15, 2024."
+    question: "Who can participate in the Olympiad?",
+    answer: "Participants must be:\n• Under 18 years old as of July 1, 2025.\n• Enrolled in a regular secondary school (not a specialized STEM or chemistry-only school).\n• Not yet started full-time university studies."
   },
   {
-    question: "What is the competition format?",
-    answer: "The competition consists of three rounds: Local (written examination), National (theoretical and practical tests), and International Final (comprehensive examination, laboratory practical, and research presentation)."
+    question: "How can my country participate?",
+    answer: "Selected countries have received official invitation letters. However, if your country was not invited but is interested, your national Olympiad organization can request participation by contacting arbicho@olympcenter.uz before the registration deadline."
   },
   {
-    question: "How are participants evaluated?",
-    answer: "Evaluation is based on three main criteria: Theoretical Knowledge (multiple choice, short answer, problem-solving), Practical Skills (laboratory technique, data analysis, safety), and Research & Innovation (project presentation, methodology)."
+    question: "Can students register individually?",
+    answer: "No, students cannot register individually. Each country must send an official national team selected through their own national competition or selection process."
   },
   {
-    question: "What prizes are available?",
-    answer: "ARBIChO offers over $50,000 in prizes, including gold, silver, and bronze medals, special awards for outstanding performance, research grants, and internship opportunities with leading scientific institutions."
+    question: "How many students can each country send?",
+    answer: "Each country may send one team, consisting of:\n• 4 student participants\n• 1 team leader"
   },
   {
-    question: "Is there a participation fee?",
-    answer: "Yes, there is a nominal participation fee that varies by region. Fee waivers and scholarships are available for eligible students. Early bird registrants receive a significant discount."
+    question: "How can we register for the Olympiad?",
+    answer: "Teams must register online by March 15, 2025 (UTC+5) via the provided link in the invitation letter."
   },
   {
-    question: "How can schools get involved?",
-    answer: "Schools can participate by nominating students, hosting local rounds, or becoming an official ARBIChO center. Contact our school partnerships team for more information."
+    question: "Is there a registration fee?",
+    answer: "No, there is no registration fee for participating teams."
   },
   {
-    question: "What preparation resources are available?",
-    answer: "We provide comprehensive study materials, practice problems, video tutorials, and online workshops. Registered participants get access to our exclusive learning platform."
+    question: "What expenses are covered by the organizers?",
+    answer: "The Organizing Committee covers:\n• Accommodation (hotel stay)\n• Meals (breakfast, lunch, and dinner)\n• Local transportation (within Uzbekistan)"
   },
   {
-    question: "Where is the international final held?",
-    answer: "The 2024 International Final will be held in Tashkent, Uzbekistan. The event includes not only the competition but also cultural programs, scientific workshops, and networking opportunities."
+    question: "What expenses must participants cover?",
+    answer: "Participants must cover:\n• International travel costs (flights, visas, insurance)"
+  },
+  {
+    question: "What is the format of the Olympiad?",
+    answer: "The competition consists of two rounds:\n• Practical Examination (90 minutes, 30 points)\n• Theoretical Examination (4 hours, 80 points)"
+  },
+  {
+    question: "Can I bring a calculator or periodic table to the exam?",
+    answer: "Yes, students may bring a non-programmable scientific calculator and a printed periodic table provided by the organizers."
+  },
+  {
+    question: "Are electronic devices allowed during the exam?",
+    answer: "No. The use of phones, tablets, smartwatches, or any other electronic devices is strictly prohibited during the exam. Violation may result in disqualification."
+  },
+  {
+    question: "How are the exams graded?",
+    answer: "• Theoretical exams are graded out of 80 points.\n• Practical exams are graded out of 30 points.\n• Total maximum score: 110 points.\n• A panel of international and local experts ensures fair grading."
+  },
+  {
+    question: "How are winners determined?",
+    answer: "The top 60% of participants receive medals in a 1 (gold): 2 (silver): 3 (bronze) ratio."
   }
-]
+];
+
 
 export function FAQSection() {
   return (

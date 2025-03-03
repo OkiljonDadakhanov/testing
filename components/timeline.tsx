@@ -17,17 +17,16 @@ export function TimelineSection() {
   const timelineEvents = [
     {
       title: "Registration Opens",
-      date: new Date("2025-01-15"),
+      date: new Date("2025-03-01"),
       description: "Online registration begins for all divisions",
       details: [
         "Early bird registration available",
         "Team registrations open",
-        "School nominations begin"
       ]
     },
     {
       title: "Registration Deadline",
-      date: new Date("2025-06-15"),
+      date: new Date("2025-03-31"),
       description: "Last day to register for the competition",
       details: [
         "Individual registration closes",

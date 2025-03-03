@@ -1,7 +1,8 @@
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { CalendarDays, Trophy, Globe2, GraduationCap } from "lucide-react";
+import { CalendarDays, Medal, Globe2, GraduationCap } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Hero() {
   return (
@@ -68,8 +69,9 @@ export default function Hero() {
                 <span>June 01-08, 2025</span>
               </div>
               <div className="flex items-center gap-3 text-emerald-100/90">
-                <Trophy className="h-5 w-5 text-emerald-400" />
-                <span>$5,000 in Prizes</span>
+                <Medal className="h-5 w-5 text-emerald-400" />
+                <span>Medals in a 1:2:3 ratio</span>
+
               </div>
               <div className="flex items-center gap-3 text-emerald-100/90">
                 <Globe2 className="h-5 w-5 text-emerald-400" />
@@ -77,17 +79,19 @@ export default function Hero() {
               </div>
               <div className="flex items-center gap-3 text-emerald-100/90">
                 <GraduationCap className="h-5 w-5 text-emerald-400" />
-                <span>Ages 14-19 Eligible</span>
+                <span>Ages under 18 Eligible</span>
               </div>
             </div>
 
             <div className="flex flex-col gap-4 sm:flex-row">
+              <Link href="/about">
               <Button
                 size="lg"
                 className="bg-emerald-500 text-white hover:bg-emerald-600 cursor-pointer"
               >
                 Register Now
               </Button>
+              </Link>
               <Button
                 size="lg"
                 variant="outline"

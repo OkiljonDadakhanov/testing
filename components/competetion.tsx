@@ -9,9 +9,7 @@ import {
 import { Badge } from "@/components/ui/badge";
 import {
   ArrowRight,
-  Trophy,
-  Users,
-  GraduationCap,
+
   ClipboardCheck,
 } from "lucide-react";
 
@@ -37,7 +35,7 @@ export function CompetitionSection() {
             Competition Structure
           </Badge>
           <h2 className="mb-4 text-3xl font-bold tracking-tight text-white sm:text-4xl">
-            Competition Categories & Rounds
+            Competition  Rounds
           </h2>
           <p className="text-emerald-100/80">
             A comprehensive international chemistry competition designed to
@@ -46,56 +44,7 @@ export function CompetitionSection() {
         </div>
 
         {/* Age Categories */}
-        <div className="mb-16">
-          <h3 className="mb-8 text-2xl font-semibold text-white">
-            Age Categories
-          </h3>
-          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            <Card className="border-emerald-800/20 bg-emerald-900/10 backdrop-blur">
-              <CardHeader>
-                <CardTitle className="flex items-center gap-2 text-emerald-100">
-                  <Users className="h-5 w-5 text-emerald-400" />
-                  Junior Division
-                </CardTitle>
-                <CardDescription className="text-emerald-100/70">
-                  Ages 14-15
-                </CardDescription>
-              </CardHeader>
-              <CardContent className="text-emerald-100/80">
-                Perfect for young chemistry enthusiasts starting their
-                scientific journey.
-              </CardContent>
-            </Card>
-            <Card className="border-emerald-800/20 bg-emerald-900/10 backdrop-blur">
-              <CardHeader>
-                <CardTitle className="flex items-center gap-2 text-emerald-100">
-                  <GraduationCap className="h-5 w-5 text-emerald-400" />
-                  Senior Division
-                </CardTitle>
-                <CardDescription className="text-emerald-100/70">
-                  Ages 16-17
-                </CardDescription>
-              </CardHeader>
-              <CardContent className="text-emerald-100/80">
-                For advanced students ready to tackle complex chemical concepts.
-              </CardContent>
-            </Card>
-            <Card className="border-emerald-800/20 bg-emerald-900/10 backdrop-blur">
-              <CardHeader>
-                <CardTitle className="flex items-center gap-2 text-emerald-100">
-                  <Trophy className="h-5 w-5 text-emerald-400" />
-                  Advanced Division
-                </CardTitle>
-                <CardDescription className="text-emerald-100/70">
-                  Ages 18-19
-                </CardDescription>
-              </CardHeader>
-              <CardContent className="text-emerald-100/80">
-                Designed for exceptional students pursuing chemistry excellence.
-              </CardContent>
-            </Card>
-          </div>
-        </div>
+       
 
         {/* Competition Rounds */}
         <div className="mb-16">
@@ -116,18 +65,17 @@ export function CompetitionSection() {
                   <Card className="border-emerald-800/20 bg-emerald-900/10 backdrop-blur">
                     <CardHeader>
                       <CardTitle className="text-emerald-100">
-                        Local Round
+                        Practical Examination
                       </CardTitle>
                       <CardDescription className="text-emerald-100/70">
-                        School/Regional Level
+                      Participants will receive a set of experimental tasks to complete.
                       </CardDescription>
                     </CardHeader>
                     <CardContent>
                       <ul className="list-disc space-y-2 pl-4 text-emerald-100/80">
-                        <li>Written examination (2 hours)</li>
-                        <li>Multiple choice and short answer questions</li>
-                        <li>Focus on fundamental chemistry concepts</li>
-                        <li>Top 30% proceed to national round</li>
+                        <li>	Format: Participants will perform a laboratory experiment.</li>
+                        <li>Scoring: The maximum score for this round is 30 points.</li>
+                        <li>Duration: 1.5 hours (90 minutes).</li>
                       </ul>
                     </CardContent>
                   </Card>
@@ -145,103 +93,77 @@ export function CompetitionSection() {
                   <Card className="border-emerald-800/20 bg-emerald-900/10 backdrop-blur">
                     <CardHeader>
                       <CardTitle className="text-emerald-100">
-                        National Round
+                      Theoretical Examination
                       </CardTitle>
                       <CardDescription className="text-emerald-100/70">
-                        Country Level
+                        Students are provided with all necessary assets(scientific calculator, periodic table, pen, paper).
                       </CardDescription>
                     </CardHeader>
                     <CardContent>
                       <ul className="list-disc space-y-2 pl-4 text-emerald-100/80">
-                        <li>Theoretical exam (3 hours)</li>
-                        <li>Practical laboratory test (2 hours)</li>
-                        <li>Advanced problem-solving questions</li>
-                        <li>Top 10 students qualify for international round</li>
+                        <li>	Format: Participants will solve 8 written problems covering various areas of chemistry.</li>
+                        <li>Scoring: Each problem is worth 10 points, making the total 80 points.</li>
+                        <li>	Duration: 4 hours (240 minutes).</li>
                       </ul>
                     </CardContent>
                   </Card>
                 </div>
               </div>
 
-              <div className="relative">
-                <div className="flex items-center md:justify-center">
-                  <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-emerald-500 bg-emerald-950 text-emerald-400">
-                    3
-                  </div>
-                </div>
-                <div className="ml-16 md:ml-0 md:mr-[50%] md:pr-8">
-                  <Card className="border-emerald-800/20 bg-emerald-900/10 backdrop-blur">
-                    <CardHeader>
-                      <CardTitle className="text-emerald-100">
-                        International Final
-                      </CardTitle>
-                      <CardDescription className="text-emerald-100/70">
-                        Global Championship
-                      </CardDescription>
-                    </CardHeader>
-                    <CardContent>
-                      <ul className="list-disc space-y-2 pl-4 text-emerald-100/80">
-                        <li>Comprehensive theoretical examination (4 hours)</li>
-                        <li>Advanced laboratory practical (3 hours)</li>
-                        <li>Research presentation</li>
-                        <li>International collaboration project</li>
-                      </ul>
-                    </CardContent>
-                  </Card>
-                </div>
-              </div>
+              
             </div>
           </div>
         </div>
 
         {/* Scoring System */}
         <div id="scoring">
-          <h3 className="mb-8 text-2xl font-semibold text-white">
-            Scoring System
-          </h3>
-          <Card className="border-emerald-800/20 bg-emerald-900/10 backdrop-blur">
-            <CardHeader>
-              <CardTitle className="flex items-center gap-2 text-emerald-100">
-                <ClipboardCheck className="h-5 w-5 text-emerald-400" />
-                Evaluation Criteria
-              </CardTitle>
-            </CardHeader>
-            <CardContent>
-              <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-                <div className="space-y-2">
-                  <h4 className="font-medium text-emerald-100">
-                    Theoretical Knowledge
-                  </h4>
-                  <ul className="list-disc space-y-1 pl-4 text-sm text-emerald-100/80">
-                    <li>Multiple choice (30%)</li>
-                    <li>Short answer (30%)</li>
-                    <li>Problem solving (40%)</li>
-                  </ul>
-                </div>
-                <div className="space-y-2">
-                  <h4 className="font-medium text-emerald-100">
-                    Practical Skills
-                  </h4>
-                  <ul className="list-disc space-y-1 pl-4 text-sm text-emerald-100/80">
-                    <li>Laboratory technique (40%)</li>
-                    <li>Data analysis (30%)</li>
-                    <li>Safety compliance (30%)</li>
-                  </ul>
-                </div>
-                <div className="space-y-2">
-                  <h4 className="font-medium text-emerald-100">
-                    Research & Innovation
-                  </h4>
-                  <ul className="list-disc space-y-1 pl-4 text-sm text-emerald-100/80">
-                    <li>Project presentation (40%)</li>
-                    <li>Methodology (30%)</li>
-                    <li>Innovation (30%)</li>
-                  </ul>
-                </div>
-              </div>
-            </CardContent>
-          </Card>
+  <h3 className="mb-8 text-2xl font-semibold text-white">
+    Scoring System
+  </h3>
+  <Card className="border-emerald-800/20 bg-emerald-900/10 backdrop-blur">
+    <CardHeader>
+      <CardTitle className="flex items-center gap-2 text-emerald-100">
+        <ClipboardCheck className="h-5 w-5 text-emerald-400" />
+        Evaluation Criteria
+      </CardTitle>
+    </CardHeader>
+    <CardContent>
+      <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <div className="space-y-2">
+          <h4 className="font-medium text-emerald-100">
+            Round 1: Practical Examination
+          </h4>
+          <ul className="list-disc space-y-1 pl-4 text-sm text-emerald-100/80">
+            <li>Participants perform a laboratory experiment.</li>
+            <li>Maximum score: 30 points.</li>
+            <li>Duration: 1.5 hours (90 minutes).</li>
+          </ul>
         </div>
+        <div className="space-y-2">
+          <h4 className="font-medium text-emerald-100">
+            Round 2: Theoretical Examination
+          </h4>
+          <ul className="list-disc space-y-1 pl-4 text-sm text-emerald-100/80">
+            <li>Participants complete 8 written tasks.</li>
+            <li>Each task is worth up to 10 points (total: 80 points).</li>
+            <li>Duration: 4 hours (240 minutes).</li>
+          </ul>
+        </div>
+        <div className="space-y-2">
+          <h4 className="font-medium text-emerald-100">
+            Overall Scoring
+          </h4>
+          <ul className="list-disc space-y-1 pl-4 text-sm text-emerald-100/80">
+            <li>Total maximum score: 110 points.</li>
+            <li>Round 1 contributes 30 points.</li>
+            <li>Round 2 contributes 80 points.</li>
+          </ul>
+        </div>
+      </div>
+    </CardContent>
+  </Card>
+</div>
+
 
         <div className="mt-12 text-center">
           <Button className="bg-emerald-500 text-white hover:bg-emerald-600">
