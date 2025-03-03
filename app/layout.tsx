@@ -4,6 +4,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/header";
 import { SiteFooter } from "@/components/footer";
+import Head from "next/head";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -16,10 +17,37 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://arbicho.uz"),
+  keywords: [
+    "ARBIChO",
+    "Al Beruniy olimpiadasi",
+    "Al Beruniy olimpiada",
+    "Abu Rayhan Biruni",
+    "Chemistry Olympiad",
+    "International Chemistry Competition",
+    "Science Competition",
+    "Young Chemists",
+    "Global Science Contest",
+    "Chemistry Contest",
+    "Scientific Excellence",
+    "STEM Olympiad",
+    "Chemistry Challenge",
+    "Biruni Chemistry Olympiad",
+    "International Science Olympiad",
+    "High School Chemistry Competition",
+    "Chemistry Talent Recognition",
+    "Global Chemistry Contest",
+    "Future Scientists",
+    "Chemistry Students",
+    "Chemistry Exam",
+    "Olympiad Preparation",
+  ],
   title:
     "Abu Rayhan Biruni International Chemistry Olympiad | Global Science Competition",
-  description:
-    "Compete in the Abu Rayhan Biruni International Chemistry Olympiad, a prestigious global competition for young chemists. Test your skills, gain recognition, and connect with future scientists.",
+  openGraph: {
+    description:
+      "Compete in the Abu Rayhan Biruni International Chemistry Olympiad, a prestigious global competition for young chemists. Test your skills, gain recognition, and connect with future scientists.",
+  },
 };
 
 export default function RootLayout({
@@ -32,6 +60,18 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <Head>
+          <title>
+            ARBIChO - Abu Rayhan Biruni International Chemistry Olympiad
+          </title>
+          <meta
+            name="description"
+            content="ARBIChO (Abu Rayhan Biruni International Chemistry Olympiad) is a prestigious international chemistry competition that fosters scientific excellence among young chemists worldwide."
+          />
+          <meta name="robots" content="index, follow" />
+          <meta name="viewport" content="width=device-width, initial-scale=1" />
+          <meta charSet="UTF-8" />
+        </Head>
         <Header />
         {children}
         <SiteFooter />
