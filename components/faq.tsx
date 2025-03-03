@@ -74,13 +74,13 @@ export function FAQSection() {
         </div>
 
         {/* FAQ Accordion */}
-        <div className="mx-auto max-w-3xl">
-          <Accordion type="single" collapsible className="space-y-4">
+        <div className="mx-auto max-w-3xl ">
+          <Accordion type="single" collapsible className="space-y-4 ">
             {faqs.map((faq, index) => (
               <AccordionItem
                 key={index}
                 value={`item-${index}`}
-                className="border-emerald-800/20 bg-emerald-900/10 backdrop-blur px-6 rounded-lg"
+                className="border-emerald-800/20 bg-emerald-900/10 backdrop-blur px-6 rounded-lg "
               >
                 <AccordionTrigger className="text-emerald-100 hover:text-emerald-300 [&[data-state=open]>div>svg]:text-emerald-400">
                   <div className="flex items-center gap-3">

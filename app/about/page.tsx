@@ -319,12 +319,12 @@ export default function AboutPage() {
             Ready to be part of this prestigious international competition?
           </p>
           <div className="flex flex-col gap-4 sm:flex-row justify-center">
-            <Button className="bg-emerald-500 text-white hover:bg-emerald-600">
+            <Button className="bg-emerald-500 text-white hover:bg-emerald-600 cursor-pointer">
               Register Now!
             </Button>
             <Button
               variant="outline"
-              className="border-emerald-400/50 text-emerald-100 hover:bg-emerald-950/50 hover:text-emerald-50"
+              className="border-emerald-400/50 text-emerald-100 hover:bg-emerald-950/50 hover:text-emerald-50 cursor-pointer"
             >
               Contact Us
             </Button>

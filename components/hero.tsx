@@ -84,14 +84,14 @@ export default function Hero() {
             <div className="flex flex-col gap-4 sm:flex-row">
               <Button
                 size="lg"
-                className="bg-emerald-500 text-white hover:bg-emerald-600"
+                className="bg-emerald-500 text-white hover:bg-emerald-600 cursor-pointer"
               >
                 Register Now
               </Button>
               <Button
                 size="lg"
                 variant="outline"
-                className="border-emerald-400/50 text-emerald-100 hover:bg-emerald-950/50 hover:text-emerald-50"
+                className="border-emerald-400/50 text-emerald-100 hover:bg-emerald-950/50 hover:text-emerald-50 cursor-pointer"
               >
                 Learn More
               </Button>
