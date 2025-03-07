@@ -75,7 +75,7 @@ export default function Hero() {
               </div>
               <div className="flex items-center gap-3 text-emerald-100/90">
                 <Globe2 className="h-5 w-5 text-emerald-400" />
-                <span>30+ Countries</span>
+                <span>16 Countries</span>
               </div>
               <div className="flex items-center gap-3 text-emerald-100/90">
                 <GraduationCap className="h-5 w-5 text-emerald-400" />
