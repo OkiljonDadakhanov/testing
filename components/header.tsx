@@ -20,8 +20,8 @@ export function Header() {
         <Link href="/" className="flex items-center z-10">
           <Image
             src="/logo/logowhite.png"
-            width={100} // Adjust width as needed
-            height={64} // Adjust height as needed
+            width={100} 
+            height={64} 
             alt="logo of ARBIChO"
             className="object-contain"
           />

@@ -92,7 +92,7 @@ export default function UzbekistanPage() {
               {
                 icon: <Globe className="h-6 w-6 text-emerald-400" />,
                 title: "Language",
-                description: "Uzbek (official), Russian widely spoken",
+                description: "Uzbek",
               },
               {
                 icon: <Users className="h-6 w-6 text-emerald-400" />,

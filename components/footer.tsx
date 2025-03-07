@@ -95,19 +95,20 @@ export function SiteFooter() {
                   href="mailto:info@arbicho.com"
                   className="text-sm leading-6 text-emerald-100/70 hover:text-emerald-100"
                 >
-                  info@arbicho.com
+                  arbicho@olympcenter.uz
                 </Link>
               </li>
               <li className="flex gap-2">
                 <Phone className="h-5 w-5 text-emerald-400" />
                 <span className="text-sm leading-6 text-emerald-100/70">
-                  +998-XX-XXX-XXXX
+                +998 77 550 33 66
                 </span>
               </li>
               <li className="flex gap-2">
-                <MapPin className="h-5 w-5 text-emerald-400" />
+                <MapPin className="h-10 w-10 text-emerald-400" />
                 <span className="text-sm leading-6 text-emerald-100/70">
-                  Tashkent, Uzbekistan
+                100099, Otchopar-1, Darvozakent Street, House 60,
+                Yunusobod District, Tashkent, Uzbekistan
                 </span>
               </li>
             </ul>

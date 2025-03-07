@@ -13,7 +13,6 @@ import {
   Medal,
   ScrollText,
   Lightbulb,
-  DollarSign,
 } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -225,7 +224,7 @@ export default function AboutPage() {
                 <h3 className="text-lg font-medium text-emerald-100">
                   Additional Awards
                 </h3>
-                <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+                <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-2">
                   <div className="flex items-start gap-4">
                     <div className="p-2 rounded-lg bg-emerald-900/20">
                       <ScrollText className="h-5 w-5 text-emerald-400" />
@@ -254,19 +253,7 @@ export default function AboutPage() {
                       </p>
                     </div>
                   </div>
-                  <div className="flex items-start gap-4">
-                    <div className="p-2 rounded-lg bg-emerald-900/20">
-                      <DollarSign className="h-5 w-5 text-emerald-400" />
-                    </div>
-                    <div>
-                      <h4 className="font-medium text-emerald-100">
-                        Monetary Prizes
-                      </h4>
-                      <p className="text-sm text-emerald-100/70">
-                        May be awarded to top-ranking competitors
-                      </p>
-                    </div>
-                  </div>
+                  
                 </div>
               </div>
             </CardContent>

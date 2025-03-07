@@ -20,12 +20,7 @@ const contacts = [
     email: "info@olympcenter.uz",
     phone: "+998 77 550 33 66",
   },
-  {
-    name: "Dadakhonov Okiljon",
-    role: "IT department",
-    email: "okiljondadakhonov@gmail.com",
-    phone: "+998 99 109 34 14",
-  },
+  
 
 ];
 
@@ -105,7 +100,7 @@ export default function ContactPage() {
           <Card className="border-emerald-800/20 bg-emerald-900/10 backdrop-blur">
             <CardHeader>
               <CardTitle className="text-emerald-100">
-                Contact Persons
+                Contact Person
               </CardTitle>
             </CardHeader>
             <CardContent className="space-y-6">

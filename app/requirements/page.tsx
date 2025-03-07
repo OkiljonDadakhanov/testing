@@ -251,37 +251,7 @@ export default function RequirementsPage() {
                 </div>
               </div>
 
-              {/* Registration Fees */}
-              <div className="space-y-4">
-                <h3 className="text-lg font-medium text-emerald-100">
-                  Registration Fees
-                </h3>
-                <div className="grid gap-4 sm:grid-cols-2">
-                  <div className="space-y-2 p-4 rounded-lg bg-emerald-900/20">
-                    <h4 className="font-medium text-emerald-100">
-                      Early Bird Rate
-                    </h4>
-                    <p className="text-2xl font-bold text-emerald-400">$200</p>
-                    <p className="text-sm text-emerald-100/70">
-                      Per participant until February 1, 2025
-                    </p>
-                  </div>
-                  <div className="space-y-2 p-4 rounded-lg bg-emerald-900/20">
-                    <h4 className="font-medium text-emerald-100">
-                      Regular Rate
-                    </h4>
-                    <p className="text-2xl font-bold text-emerald-400">$250</p>
-                    <p className="text-sm text-emerald-100/70">
-                      Per participant until February 15, 2025
-                    </p>
-                  </div>
-                </div>
-                <p className="text-sm text-emerald-100/70">
-                  * Fee waivers available for eligible countries. Contact the
-                  organizing committee for details.
-                </p>
-              </div>
-
+             
               {/* Registration Steps */}
               <div className="space-y-4">
                 <h3 className="text-lg font-medium text-emerald-100">
@@ -377,10 +347,7 @@ export default function RequirementsPage() {
                 </h3>
                 <ul className="space-y-3">
                   {[
-                    "Official competition language is English",
-                    "All examinations will be provided in English",
-                    "Mentors must be proficient in English for effective communication",
-                    "Translation support available for specific circumstances",
+                    "The official languages of the Olympiad are Uzbek and English. Participants may complete the exam in their native language.",
                   ].map((rule, index) => (
                     <li key={index} className="flex items-start gap-2">
                       <Globe className="h-5 w-5 text-emerald-400 mt-0.5 shrink-0" />

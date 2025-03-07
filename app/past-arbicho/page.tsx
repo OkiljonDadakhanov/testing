@@ -9,124 +9,63 @@ import {
   Calendar,
   ArrowRight,
   Medal,
-  Star,
 } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import pic from '@/public/images/buxoro.jpg'
 
 // Past competition data
 const pastCompetitions = [
   {
-    year: "2023",
-    location: "Tashkent, Uzbekistan",
-    dates: "May 15-22, 2023",
-    participants: "192 students from 48 countries",
+    year: "ARBIChO 2023",
+    location: "Khiva, Uzbekistan",
+    dates: "June 11 to June 17, 2023",
+    participants: "112 students from 16 countries",
     highlights: [
       "Record number of participating countries",
       "First hybrid format with both in-person and virtual components",
       "Special symposium on sustainable chemistry",
     ],
     topCountries: [
-      { name: "China", gold: 4, silver: 0, bronze: 0, total: 4 },
-      { name: "United States", gold: 3, silver: 1, bronze: 0, total: 4 },
-      { name: "South Korea", gold: 2, silver: 2, bronze: 0, total: 4 },
-      { name: "Russia", gold: 2, silver: 1, bronze: 1, total: 4 },
-      { name: "Japan", gold: 1, silver: 3, bronze: 0, total: 4 },
+      { name: "Uzbekistan ", gold: 3, silver: 4, bronze: 1, total: 8 },
+      { name: "Vietnam ", gold: 4, silver: 4, bronze: 0, total: 8 },
+      { name: "Belarus ", gold: 0, silver: 3, bronze: 3, total: 6 },
+      { name: "Kazakhstan ", gold: 0, silver: 3, bronze: 5, total: 8 },
+      { name: "Brazil  ", gold: 0, silver: 0, bronze: 3, total: 3 },
+      { name: "Tajikistan   ", gold: 0, silver: 0, bronze: 1, total: 1 },
+      { name: "Turkmenistan    ", gold: 0, silver: 0, bronze: 6, total: 0 },
+      { name: "Azerbaijan     ", gold: 0, silver: 0, bronze: 4, total: 4 },
+      { name: "Russia ", gold: 1, silver: 2, bronze: 3, total: 6 },
+
+
+
     ],
     featuredImage: "/placeholder.svg?height=400&width=800",
   },
-  {
-    year: "2022",
-    location: "Almaty, Kazakhstan",
-    dates: "May 10-17, 2022",
-    participants: "180 students from 45 countries",
-    highlights: [
-      "First post-pandemic in-person competition",
-      "Introduction of the research presentation component",
-      "Special focus on environmental chemistry",
-    ],
-    topCountries: [
-      { name: "China", gold: 3, silver: 1, bronze: 0, total: 4 },
-      { name: "United States", gold: 3, silver: 0, bronze: 1, total: 4 },
-      { name: "South Korea", gold: 2, silver: 1, bronze: 1, total: 4 },
-      { name: "Japan", gold: 2, silver: 1, bronze: 1, total: 4 },
-      { name: "Germany", gold: 1, silver: 2, bronze: 1, total: 4 },
-    ],
-    featuredImage: "/placeholder.svg?height=400&width=800",
-  },
-  {
-    year: "2021",
-    location: "Virtual (Hosted by Uzbekistan)",
-    dates: "May 16-24, 2021",
-    participants: "168 students from 42 countries",
-    highlights: [
-      "First fully virtual ARBIChO due to the global pandemic",
-      "Innovative remote laboratory experiments",
-      "Special lecture series by Nobel laureates",
-    ],
-    topCountries: [
-      { name: "China", gold: 4, silver: 0, bronze: 0, total: 4 },
-      { name: "United States", gold: 2, silver: 2, bronze: 0, total: 4 },
-      { name: "Russia", gold: 2, silver: 1, bronze: 1, total: 4 },
-      { name: "South Korea", gold: 1, silver: 3, bronze: 0, total: 4 },
-      { name: "Taiwan", gold: 1, silver: 2, bronze: 1, total: 4 },
-    ],
-    featuredImage: "/placeholder.svg?height=400&width=800",
-  },
-  {
-    year: "2020",
-    location: "Cancelled due to COVID-19 pandemic",
-    dates: "Originally scheduled for May 2020",
-    participants: "N/A",
-    highlights: [
-      "Competition cancelled due to global health concerns",
-      "Virtual symposium held in place of the competition",
-      "Special online workshops for chemistry students worldwide",
-    ],
-    topCountries: [],
-    featuredImage: "/placeholder.svg?height=400&width=800",
-  },
-  {
-    year: "2019",
-    location: "Baku, Azerbaijan",
-    dates: "May 12-19, 2019",
-    participants: "160 students from 40 countries",
-    highlights: [
-      "10th anniversary of ARBIChO",
-      "Introduction of the Junior division",
-      "Special focus on petrochemistry",
-    ],
-    topCountries: [
-      { name: "China", gold: 3, silver: 1, bronze: 0, total: 4 },
-      { name: "Russia", gold: 3, silver: 0, bronze: 1, total: 4 },
-      { name: "United States", gold: 2, silver: 2, bronze: 0, total: 4 },
-      { name: "South Korea", gold: 2, silver: 1, bronze: 1, total: 4 },
-      { name: "Japan", gold: 1, silver: 2, bronze: 1, total: 4 },
-    ],
-    featuredImage: "/placeholder.svg?height=400&width=800",
-  },
+  
+
 ];
 
 // Statistics
 const statistics = [
   {
     label: "Total Competitions",
-    value: "12",
+    value: "1",
     icon: <Trophy className="h-5 w-5 text-emerald-400" />,
   },
   {
     label: "Countries Participated",
-    value: "68",
+    value: "16 ",
     icon: <MapPin className="h-5 w-5 text-emerald-400" />,
   },
   {
     label: "Total Participants",
-    value: "2,100+",
+    value: "112",
     icon: <Users className="h-5 w-5 text-emerald-400" />,
   },
   {
     label: "Gold Medals Awarded",
-    value: "240",
+    value: "8",
     icon: <Medal className="h-5 w-5 text-emerald-400" />,
   },
 ];
@@ -346,7 +285,7 @@ export default function PastARBIChOPage() {
                           className="relative aspect-square overflow-hidden rounded-lg"
                         >
                           <Image
-                            src={``}
+                            src={pic}
                             alt={`ARBIChO ${competition.year} Photo ${item}`}
                             fill
                             className="object-cover"
@@ -361,84 +300,7 @@ export default function PastARBIChOPage() {
           </Tabs>
         </div>
 
-        {/* Historical Timeline */}
-        <div className="mx-auto max-w-5xl mb-16">
-          <div className="text-center mb-8">
-            <h2 className="text-2xl font-bold text-white">ARBIChO Timeline</h2>
-            <p className="mt-2 text-emerald-100/80">
-              The evolution of our prestigious competition
-            </p>
-          </div>
-
-          <div className="relative">
-            <div className="absolute left-4 top-0 bottom-0 w-px bg-emerald-800/20 md:left-1/2" />
-            <div className="space-y-12">
-              {[
-                {
-                  year: "2010",
-                  title: "Inaugural Competition",
-                  description:
-                    "The first ARBIChO was held in Tashkent, Uzbekistan with 20 participating countries",
-                },
-                {
-                  year: "2015",
-                  title: "5th Anniversary",
-                  description:
-                    "Expanded to include 35 countries and introduced the research component",
-                },
-                {
-                  year: "2019",
-                  title: "10th Anniversary",
-                  description:
-                    "Celebrated a decade of excellence with special events and the introduction of the Junior division",
-                },
-                {
-                  year: "2021",
-                  title: "Virtual Innovation",
-                  description:
-                    "Successfully adapted to a fully virtual format during the global pandemic",
-                },
-                {
-                  year: "2023",
-                  title: "Record Participation",
-                  description:
-                    "Welcomed 48 countries, the highest number in ARBIChO history",
-                },
-              ].map((event, index) => (
-                <div key={event.year} className="relative">
-                  <div className="flex items-center md:justify-center">
-                    <div className="absolute left-4 w-px h-full bg-emerald-800/20 md:left-1/2" />
-                    <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-emerald-500 bg-emerald-950 text-emerald-400 md:absolute md:left-1/2 md:-translate-x-1/2">
-                      <Star className="h-4 w-4" />
-                    </div>
-                  </div>
-                  <div
-                    className={`ml-16 md:ml-0 ${
-                      index % 2 === 0
-                        ? "md:mr-[50%] md:pr-8"
-                        : "md:ml-[50%] md:pl-8"
-                    }`}
-                  >
-                    <Card className="border-emerald-800/20 bg-emerald-900/10 backdrop-blur">
-                      <CardHeader>
-                        <CardTitle className="flex items-center gap-2 text-emerald-100">
-                          <span className="text-emerald-400">{event.year}</span>{" "}
-                          - {event.title}
-                        </CardTitle>
-                      </CardHeader>
-                      <CardContent>
-                        <p className="text-emerald-100/80">
-                          {event.description}
-                        </p>
-                      </CardContent>
-                    </Card>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-
+       
         {/* CTA Section */}
         <div className="mx-auto max-w-3xl mt-16 text-center">
           <p className="text-emerald-100/80 mb-6">

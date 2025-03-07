@@ -5,7 +5,6 @@ import { Button } from "@/components/ui/button";
 import {
   MapPin,
   Calendar,
-  Clock,
   Users,
   GraduationCap,
   FileText,
@@ -20,9 +19,9 @@ import Link from "next/link";
 // Future competition data
 const upcomingCompetitions = [
   {
-    year: "2025",
-    location: "Tashkent, Uzbekistan",
-    dates: "June 1-8, 2025",
+    year: "2026",
+    location: "Karakalpakistan, Uzbekistan",
+    dates: "Dates to be announced soon...",
     registrationDeadline: "February 15, 2025",
     theme: "Sustainable Chemistry for a Better Future",
     eligibility: [
@@ -64,9 +63,9 @@ const upcomingCompetitions = [
     featuredImage: "/placeholder.svg?height=400&width=800",
   },
   {
-    year: "2026",
-    location: "Baku, Azerbaijan (Tentative)",
-    dates: "May 2026 (Exact dates TBA)",
+    year: "2027",
+    location: "Planning soon...",
+    dates: " (Exact dates TBA)",
     registrationDeadline: "February 2026",
     theme: "Chemistry at the Crossroads of Innovation",
     eligibility: [
@@ -193,129 +192,27 @@ export default function FutureARBIChOPage() {
                   <div>
                     <h3 className="text-xl font-semibold text-emerald-100 mb-4">
                       Important Dates
-                    </h3>
+                   </h3>
                     <div className="space-y-3">
-                      {upcomingCompetitions[0].keyDates
-                        .slice(0, 4)
-                        .map((date, index) => (
-                          <div key={index} className="flex items-start gap-2">
-                            <div className="mt-0.5">
-                              {date.status === "completed" ? (
-                                <CheckCircle className="h-5 w-5 text-emerald-500" />
-                              ) : date.status === "upcoming" ? (
-                                <AlertCircle className="h-5 w-5 text-yellow-500" />
-                              ) : (
-                                <Clock className="h-5 w-5 text-blue-500" />
-                              )}
-                            </div>
-                            <div>
-                              <p className="font-medium text-emerald-100">
-                                {date.event}
-                              </p>
-                              <p className="text-sm text-emerald-100/70">
-                                {date.date}
-                              </p>
-                            </div>
-                          </div>
-                        ))}
-                      <Button
-                        variant="link"
-                        className="text-emerald-400 hover:text-emerald-300 p-0 h-auto"
-                        onClick={() =>
-                          document
-                            .getElementById("timeline")
-                            ?.scrollIntoView({ behavior: "smooth" })
-                        }
-                      >
-                        View full timeline
-                      </Button>
+                    <div className="flex items-center gap-2">
+      <AlertCircle className="h-5 w-5 text-yellow-500" />
+      <p className="text-emerald-100/80">Exact Dates to be announced.</p>
+    </div>
+    <div className="flex items-center gap-2">
+      <CheckCircle className="h-5 w-5 text-emerald-500" />
+      <p className="text-emerald-100/80">Another date</p>
+    </div>
                     </div>
                   </div>
                 </div>
 
-                <div className="flex flex-col sm:flex-row gap-4 pt-4">
-                  <Button className="bg-emerald-500 text-white hover:bg-emerald-600">
-                    Registration Information
-                    <ArrowRight className="ml-2 h-4 w-4" />
-                  </Button>
-                  <Button
-                    variant="outline"
-                    className="border-emerald-400/50 text-emerald-100 hover:bg-emerald-950/50 hover:text-emerald-50"
-                  >
-                    Download Competition Syllabus
-                  </Button>
-                </div>
+               
               </div>
             </CardContent>
           </Card>
         </div>
 
-        {/* Timeline */}
-        <div id="timeline" className="mx-auto max-w-5xl mb-16">
-          <div className="text-center mb-8">
-            <h2 className="text-2xl font-bold text-white">
-              ARBIChO 2025 Timeline
-            </h2>
-            <p className="mt-2 text-emerald-100/80">
-              Key dates for the upcoming competition
-            </p>
-          </div>
-
-          <div className="relative">
-            <div className="absolute left-4 top-0 bottom-0 w-px bg-emerald-800/20 md:left-1/2" />
-            <div className="space-y-8">
-              {upcomingCompetitions[0].keyDates.map((date, index) => (
-                <div key={index} className="relative">
-                  <div className="flex items-center md:justify-center">
-                    <div className="absolute left-4 w-px h-full bg-emerald-800/20 md:left-1/2" />
-                    <div
-                      className={`
-                      flex h-8 w-8 shrink-0 items-center justify-center rounded-full border-2
-                      ${
-                        date.status === "completed"
-                          ? "border-emerald-500 bg-emerald-900"
-                          : date.status === "upcoming"
-                          ? "border-yellow-500 bg-yellow-900"
-                          : "border-blue-500 bg-blue-900"
-                      }
-                      md:absolute md:left-1/2 md:-translate-x-1/2
-                    `}
-                    >
-                      {date.status === "completed" ? (
-                        <CheckCircle className="h-4 w-4 text-emerald-500" />
-                      ) : date.status === "upcoming" ? (
-                        <AlertCircle className="h-4 w-4 text-yellow-500" />
-                      ) : (
-                        <Clock className="h-4 w-4 text-blue-500" />
-                      )}
-                    </div>
-                  </div>
-                  <div
-                    className={`ml-16 md:ml-0 ${
-                      index % 2 === 0
-                        ? "md:mr-[50%] md:pr-8"
-                        : "md:ml-[50%] md:pl-8"
-                    }`}
-                  >
-                    <Card className="border-emerald-800/20 bg-emerald-900/10 backdrop-blur">
-                      <CardContent className="p-4">
-                        <div className="space-y-1">
-                          <h3 className="font-medium text-emerald-100">
-                            {date.event}
-                          </h3>
-                          <p className="text-sm text-emerald-100/70">
-                            {date.date}
-                          </p>
-                        </div>
-                      </CardContent>
-                    </Card>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-
+      
         {/* Competition Format */}
         <div className="mx-auto max-w-5xl mb-16">
           <div className="text-center mb-8">
@@ -323,7 +220,7 @@ export default function FutureARBIChOPage() {
               Competition Format
             </h2>
             <p className="mt-2 text-emerald-100/80">
-              What to expect at ARBIChO 2025
+              What to expect at ARBIChO 2026
             </p>
           </div>
 
@@ -373,7 +270,7 @@ export default function FutureARBIChOPage() {
           <div className="text-center mb-8">
             <h2 className="text-2xl font-bold text-white">Host Country</h2>
             <p className="mt-2 text-emerald-100/80">
-              Learn more about Uzbekistan, the host of ARBIChO 2025
+              Learn more about Uzbekistan, the host of ARBIChO 2026
             </p>
           </div>
 
@@ -455,7 +352,7 @@ export default function FutureARBIChOPage() {
               </p>
               <p className="text-emerald-100/80">
                 More details will be announced following the conclusion of
-                ARBIChO 2025.
+                ARBIChO 2026.
               </p>
             </CardContent>
           </Card>
@@ -467,8 +364,8 @@ export default function FutureARBIChOPage() {
             Ready to be part of the next generation of chemistry excellence?
           </p>
           <div className="flex flex-col gap-4 sm:flex-row justify-center">
-            <Button className="bg-emerald-500 text-white hover:bg-emerald-600">
-              Register for ARBIChO 2025
+            <Button className="bg-emerald-500 text-white hover:bg-emerald-600 cursor-pointer">
+              Register for ARBIChO 2026
               <ArrowRight className="ml-2 h-4 w-4" />
             </Button>
             <Button
