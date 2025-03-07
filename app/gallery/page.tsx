@@ -69,103 +69,11 @@ const galleryImages: GalleryImage[] = [
     category: "Teams",
     description: "Group photo of all participating teams at ARBIChO 2023",
   },
-  {
-    id: 6,
-    src: "",
-    alt: "Opening Ceremony 2022",
-    year: "2022",
-    category: "Ceremonies",
-    description:
-      "Opening ceremony of ARBIChO 2022 with participants from 42 countries",
-  },
-  {
-    id: 7,
-    src: "",
-    alt: "Laboratory Session 2022",
-    year: "2022",
-    category: "Competition",
-    description:
-      "Students working on theoretical problems during the 2022 competition",
-  },
-  {
-    id: 8,
-    src: "",
-    alt: "Award Ceremony 2022",
-    year: "2022",
-    category: "Ceremonies",
-    description: "Medal ceremony at ARBIChO 2022",
-  },
-  {
-    id: 9,
-    src: "",
-    alt: "Cultural Program 2022",
-    year: "2022",
-    category: "Cultural",
-    description: "Cultural exchange program with international participants",
-  },
-  {
-    id: 10,
-    src: "",
-    alt: "Team Photo 2022",
-    year: "2022",
-    category: "Teams",
-    description: "Group photo of all participating teams at ARBIChO 2022",
-  },
-  {
-    id: 11,
-    src: "",
-    alt: "Opening Ceremony 2021",
-    year: "2021",
-    category: "Ceremonies",
-    description: "Virtual opening ceremony of ARBIChO 2021",
-  },
-  {
-    id: 12,
-    src: "",
-    alt: "Laboratory Session 2021",
-    year: "2021",
-    category: "Competition",
-    description:
-      "Remote laboratory session during the 2021 virtual competition",
-  },
-  {
-    id: 13,
-    src: "",
-    alt: "Award Ceremony 2021",
-    year: "2021",
-    category: "Ceremonies",
-    description: "Virtual award ceremony for ARBIChO 2021",
-  },
-  {
-    id: 14,
-    src: "",
-    alt: "Team Photo 2021",
-    year: "2021",
-    category: "Teams",
-    description:
-      "Virtual group photo of all participating teams at ARBIChO 2021",
-  },
-  {
-    id: 15,
-    src: "",
-    alt: "Scientific Committee 2023",
-    year: "2023",
-    category: "Organization",
-    description:
-      "Members of the Scientific Committee preparing competition materials",
-  },
-  {
-    id: 16,
-    src: "",
-    alt: "Organizing Committee 2022",
-    year: "2022",
-    category: "Organization",
-    description: "Organizing Committee meeting for ARBIChO 2022",
-  },
+ 
 ];
 
 // Available years and categories for filtering
-const years = ["All", "2023", "2022", "2021"];
+const years = ["All", "2023"];
 const categories = [
   "All",
   "Ceremonies",
