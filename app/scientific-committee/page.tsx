@@ -79,7 +79,7 @@ const scientificMembers: CommitteeMember[] = [
     bio: "PhD student at ETH ",
     email: "w.zhang@arbicho.com",
     linkedin: "https://linkedin.com/in/example",
-    image: "/images/scientific/shved.jpg",
+    image: "/images/scientific/filip.jpg",
   },
   {
     name: "Xamidulla To’xtayev",
