@@ -104,11 +104,11 @@ export function MainNav() {
         </NavigationMenuItem>
 
         <NavigationMenuItem className="px-1">
-          <Link href="/arbicho-foundation" legacyBehavior passHref>
+          <Link href="/arbicho-sponsors" legacyBehavior passHref>
             <NavigationMenuLink
               className={cn(navigationMenuTriggerStyle(), "px-4")}
             >
-              ARBICHO Foundation
+              ARBICHO Sponsors
             </NavigationMenuLink>
           </Link>
         </NavigationMenuItem>
@@ -238,11 +238,11 @@ export function MobileNav({ onCloseAction }: { onCloseAction: () => void }) {
         </li>
         <li className="py-2">
           <Link
-            href="/arbicho-foundation"
+            href="/arbicho-sponsors"
             className="block text-white hover:text-emerald-300"
             onClick={onCloseAction}
           >
-            ARBICHO Foundation
+            ARBICHO Sponsors
           </Link>
         </li>
         <li className="py-2">

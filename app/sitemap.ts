@@ -10,7 +10,7 @@ export default async function sitemap() {
     "/requirements",
     "/past-arbicho",
     "/future-arbicho",
-    "/arbicho-foundation",
+    "/arbicho-sponsors",
     "/gallery",
     "/organizing-committee",
     "/scientific-committee",
