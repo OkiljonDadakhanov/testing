@@ -19,7 +19,7 @@ const scientificMembers: CommitteeMember[] = [
     bio: "Professor of Moscow State University named after M. V. Lomonosov, Doctor of Chemical Sciences.",
     email: "m.rodriguez@arbicho.com",
     linkedin: "https://linkedin.com/in/example",
-    image: "/placeholder.svg?height=200&width=200",
+    image: "/images/scientific/alex.jpg",
   },
   {
     name: "Acad. Shamansur Sagdullaev ",
@@ -29,7 +29,7 @@ const scientificMembers: CommitteeMember[] = [
     bio: "Director of Institute of Plant Chemistry. ",
     email: "y.tanaka@arbicho.com",
     linkedin: "https://linkedin.com/in/example",
-    image: "/placeholder.svg?height=200&width=200",
+    image: "/images/scientific/acad.jpg"
   },
   {
     name: "Prof. Burkhon Elmuradov ",
@@ -39,7 +39,7 @@ const scientificMembers: CommitteeMember[] = [
     bio: "Deputy Director for Research and Innovation of Institute of Plant Chemistry. ",
     email: "a.hassan@arbicho.com",
     linkedin: "https://linkedin.com/in/example",
-    image: "/placeholder.svg?height=200&width=200",
+    image: "/images/scientific/burxon.png",
   },
   {
     name: "Prof. Abdujalol Sidikov ",
@@ -49,7 +49,7 @@ const scientificMembers: CommitteeMember[] = [
     bio: "Professor Schmidt specializes in analytical methods and instrumentation for chemical analysis.",
     email: "l.schmidt@arbicho.com",
     linkedin: "https://linkedin.com/in/example",
-    image: "/placeholder.svg?height=200&width=200",
+    image: "/images/scientific/jalol.jpg",
   },
   {
     name: "Yunus Türkmen",
@@ -59,7 +59,7 @@ const scientificMembers: CommitteeMember[] = [
     bio: "Professor Bilkent University Department of Chemistry",
     email: "w.zhang@arbicho.com",
     linkedin: "https://linkedin.com/in/example",
-    image: "/placeholder.svg?height=200&width=200",
+    image: "/images/scientific/yunus.jpg",
   },
   {
     name: "Швед Андрей Михайлович",
@@ -69,7 +69,7 @@ const scientificMembers: CommitteeMember[] = [
     bio: "Teacher of Chemistry Olympiads at Foxford, Sirius OC, Center for Preparatory Programs",
     email: "w.zhang@arbicho.com",
     linkedin: "https://linkedin.com/in/example",
-    image: "/placeholder.svg?height=200&width=200",
+    image: "/images/scientific/shved.jpg",
   },
   {
     name: "Filip Ilievski",
@@ -79,7 +79,7 @@ const scientificMembers: CommitteeMember[] = [
     bio: "PhD student at ETH ",
     email: "w.zhang@arbicho.com",
     linkedin: "https://linkedin.com/in/example",
-    image: "/placeholder.svg?height=200&width=200",
+    image: "/images/scientific/shved.jpg",
   },
   {
     name: "Xamidulla To’xtayev",
@@ -89,7 +89,7 @@ const scientificMembers: CommitteeMember[] = [
     bio: "Researcher of King Abdullah University of Science and Technology. ",
     email: "w.zhang@arbicho.com",
     linkedin: "https://linkedin.com/in/example",
-    image: "/placeholder.svg?height=200&width=200",
+    image: "/images/scientific/xamid.jpg",
   },
   {
     name: "Bekzod Boltayev ",
@@ -99,7 +99,7 @@ const scientificMembers: CommitteeMember[] = [
     bio: "Surgeon at “Shifo-Nur” multidisciplinary medical center. ",
     email: "w.zhang@arbicho.com",
     linkedin: "https://linkedin.com/in/example",
-    image: "/placeholder.svg?height=200&width=200",
+    image: "/images/scientific/bek.jpg",
   },
   {
     name: "Muzaffar Maksumov",
@@ -109,7 +109,7 @@ const scientificMembers: CommitteeMember[] = [
     bio: "Graduate of the University of Siegen.  ",
     email: "w.zhang@arbicho.com",
     linkedin: "https://linkedin.com/in/example",
-    image: "/placeholder.svg?height=200&width=200",
+    image: "/images/scientific/muzaffar.jpg",
   },
   {
     name: "Abdulloh Mahmudov ",
@@ -119,7 +119,7 @@ const scientificMembers: CommitteeMember[] = [
     bio: "Researcher of Massachusetts Institute of Technology.  ",
     email: "w.zhang@arbicho.com",
     linkedin: "https://linkedin.com/in/example",
-    image: "/placeholder.svg?height=200&width=200",
+    image: "/images/scientific/abdulloh.jpg",
   },
 ]
 
