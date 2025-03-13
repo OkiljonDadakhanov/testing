@@ -62,7 +62,7 @@ export default function AboutPage() {
               <Calendar className="h-5 w-5 text-emerald-400 mt-1" />
               <div>
                 <h3 className="font-medium text-emerald-100">Date</h3>
-                <p className="text-emerald-100/70">June 1-8, 2025</p>
+                <p className="text-emerald-100/70">May 28 to June 4, 2025</p>
               </div>
             </div>
             <div className="flex items-start gap-3">
@@ -306,15 +306,18 @@ export default function AboutPage() {
             Ready to be part of this prestigious international competition?
           </p>
           <div className="flex flex-col gap-4 sm:flex-row justify-center">
-            <Button className="bg-emerald-500 text-white hover:bg-emerald-600 cursor-pointer">
-              Register Now!
-            </Button>
+           
+            <Link
+                  href="/contact"
+                  rel="noopener noreferrer"
+                >
             <Button
               variant="outline"
               className="border-emerald-400/50 text-emerald-100 hover:bg-emerald-950/50 hover:text-emerald-50 cursor-pointer"
             >
               Contact Us
             </Button>
+            </Link>
           </div>
         </div>
       </div>

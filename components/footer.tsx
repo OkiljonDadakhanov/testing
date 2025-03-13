@@ -67,7 +67,6 @@ export function SiteFooter() {
                 { name: "Home", href: "/" },
                 { name: "About ARBIChO", href: "/about" },
                 { name: "Competition Details", href: "#competition" },
-                { name: "Registration", href: "/register" },
                 { name: "FAQs", href: "#faq" },
                 { name: "Contact", href: "/contact" },
               ].map((item) => (

@@ -11,7 +11,14 @@ import {
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 import { cn } from "@/lib/utils";
+import { ChevronDown, ChevronUp } from "lucide-react";
 
 const competitionItems = [
   {
@@ -61,7 +68,7 @@ export function MainNav() {
         <NavigationMenuItem className="px-1">
           <Link href="/" legacyBehavior passHref>
             <NavigationMenuLink
-              className={cn(navigationMenuTriggerStyle(), "px-4")}
+              className={cn(navigationMenuTriggerStyle(), "px-4 w-full")}
             >
               Home
             </NavigationMenuLink>
@@ -79,17 +86,20 @@ export function MainNav() {
         </NavigationMenuItem>
 
         <NavigationMenuItem className="px-1">
-          <NavigationMenuTrigger>Competition</NavigationMenuTrigger>
+          <NavigationMenuTrigger className="cursor-pointer">Competition</NavigationMenuTrigger>
           <NavigationMenuContent>
-            <ul className="grid w-[400px] gap-3 p-4">
+            <div className="grid w-[400px] gap-3 p-4">
               {competitionItems.map((item) => (
-                <ListItem
-                  key={item.title}
-                  title={item.title}
-                  href={item.href}
-                />
+                <NavigationMenuLink key={item.title} asChild>
+                  <Link 
+                    href={item.href}
+                    className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-emerald-100/10 hover:text-emerald-300 focus:bg-emerald-100/10 focus:text-emerald-300"
+                  >
+                    <div className="text-sm font-medium leading-none">{item.title}</div>
+                  </Link>
+                </NavigationMenuLink>
               ))}
-            </ul>
+            </div>
           </NavigationMenuContent>
         </NavigationMenuItem>
 
@@ -104,17 +114,20 @@ export function MainNav() {
         </NavigationMenuItem>
 
         <NavigationMenuItem className="px-1">
-          <NavigationMenuTrigger>Info Center</NavigationMenuTrigger>
+          <NavigationMenuTrigger className="cursor-pointer">Info Center</NavigationMenuTrigger>
           <NavigationMenuContent>
-            <ul className="grid w-[400px] gap-3 p-4">
+            <div className="grid w-[400px] gap-3 p-4">
               {infoCenterItems.map((item) => (
-                <ListItem
-                  key={item.title}
-                  title={item.title}
-                  href={item.href}
-                />
+                <NavigationMenuLink key={item.title} asChild>
+                  <Link 
+                    href={item.href}
+                    className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-emerald-100/10 hover:text-emerald-300 focus:bg-emerald-100/10 focus:text-emerald-300"
+                  >
+                    <div className="text-sm font-medium leading-none">{item.title}</div>
+                  </Link>
+                </NavigationMenuLink>
               ))}
-            </ul>
+            </div>
           </NavigationMenuContent>
         </NavigationMenuItem>
 
@@ -129,17 +142,20 @@ export function MainNav() {
         </NavigationMenuItem>
 
         <NavigationMenuItem className="px-1">
-          <NavigationMenuTrigger>ARBICHO 2025</NavigationMenuTrigger>
+          <NavigationMenuTrigger className="cursor-pointer px-4 text-1xl py-2 rounded-lg hover:bg-gray-700 transition-colors">ARBICHO 2025</NavigationMenuTrigger>
           <NavigationMenuContent>
-            <ul className="grid w-[400px] gap-3 p-4">
+            <div className="grid w-[400px] gap-3 p-4">
               {arbicho2025Items.map((item) => (
-                <ListItem
-                  key={item.title}
-                  title={item.title}
-                  href={item.href}
-                />
+                <NavigationMenuLink key={item.title} asChild>
+                  <Link 
+                    href={item.href}
+                    className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-emerald-100/10 hover:text-emerald-300 focus:bg-emerald-100/10 focus:text-emerald-300"
+                  >
+                    <div className="text-sm font-medium leading-none">{item.title}</div>
+                  </Link>
+                </NavigationMenuLink>
               ))}
-            </ul>
+            </div>
           </NavigationMenuContent>
         </NavigationMenuItem>
 
@@ -168,7 +184,11 @@ export function MainNav() {
 }
 
 export function MobileNav({ onCloseAction }: { onCloseAction: () => void }) {
-  const [openSubmenu, setOpenSubmenu] = useState<string | null>(null);
+  const [openMenu, setOpenMenu] = useState<string | null>(null);
+
+  const toggleMenu = (menu: string) => {
+    setOpenMenu(openMenu === menu ? null : menu);
+  };
 
   return (
     <nav className="p-6">
@@ -192,34 +212,29 @@ export function MobileNav({ onCloseAction }: { onCloseAction: () => void }) {
           </Link>
         </li>
         <li className="py-2">
-          <button
-            onClick={() =>
-              setOpenSubmenu(
-                openSubmenu === "competition" ? null : "competition"
-              )
-            }
-            className="flex items-center justify-between w-full text-white hover:text-emerald-300"
-          >
-            Competition
-            <span className="ml-2">
-              {openSubmenu === "competition" ? "−" : "+"}
-            </span>
-          </button>
-          {openSubmenu === "competition" && (
-            <ul className="mt-2 ml-4 space-y-2">
+          <DropdownMenu open={openMenu === "competition"} onOpenChange={() => toggleMenu("competition")}>
+            <DropdownMenuTrigger asChild>
+              <button className="flex items-center justify-between w-full text-white hover:text-emerald-300">
+                Competition
+                <span className="ml-2">
+                  {openMenu === "competition" ? <ChevronUp size={16} /> : <ChevronDown size={16} />}
+                </span>
+              </button>
+            </DropdownMenuTrigger>
+            <DropdownMenuContent className="w-full bg-gray-800 border-gray-700">
               {competitionItems.map((item) => (
-                <li key={item.title}>
+                <DropdownMenuItem key={item.title} asChild>
                   <Link
                     href={item.href}
-                    className="block text-white hover:text-emerald-300"
+                    className="block w-full text-white hover:text-emerald-300"
                     onClick={onCloseAction}
                   >
                     {item.title}
                   </Link>
-                </li>
+                </DropdownMenuItem>
               ))}
-            </ul>
-          )}
+            </DropdownMenuContent>
+          </DropdownMenu>
         </li>
         <li className="py-2">
           <Link
@@ -231,32 +246,29 @@ export function MobileNav({ onCloseAction }: { onCloseAction: () => void }) {
           </Link>
         </li>
         <li className="py-2">
-          <button
-            onClick={() =>
-              setOpenSubmenu(openSubmenu === "infoCenter" ? null : "infoCenter")
-            }
-            className="flex items-center justify-between w-full text-white hover:text-emerald-300"
-          >
-            Info Center
-            <span className="ml-2">
-              {openSubmenu === "infoCenter" ? "−" : "+"}
-            </span>
-          </button>
-          {openSubmenu === "infoCenter" && (
-            <ul className="mt-2 ml-4 space-y-2">
+          <DropdownMenu open={openMenu === "infoCenter"} onOpenChange={() => toggleMenu("infoCenter")}>
+            <DropdownMenuTrigger asChild>
+              <button className="flex items-center justify-between w-full text-white hover:text-emerald-300">
+                Info Center
+                <span className="ml-2">
+                  {openMenu === "infoCenter" ? <ChevronUp size={16} /> : <ChevronDown size={16} />}
+                </span>
+              </button>
+            </DropdownMenuTrigger>
+            <DropdownMenuContent className="w-full bg-gray-800 border-gray-700">
               {infoCenterItems.map((item) => (
-                <li key={item.title}>
+                <DropdownMenuItem key={item.title} asChild>
                   <Link
                     href={item.href}
-                    className="block text-white hover:text-emerald-300"
+                    className="block w-full text-white hover:text-emerald-300"
                     onClick={onCloseAction}
                   >
                     {item.title}
                   </Link>
-                </li>
+                </DropdownMenuItem>
               ))}
-            </ul>
-          )}
+            </DropdownMenuContent>
+          </DropdownMenu>
         </li>
         <li className="py-2">
           <Link
@@ -268,34 +280,29 @@ export function MobileNav({ onCloseAction }: { onCloseAction: () => void }) {
           </Link>
         </li>
         <li className="py-2">
-          <button
-            onClick={() =>
-              setOpenSubmenu(
-                openSubmenu === "arbicho2025" ? null : "arbicho2025"
-              )
-            }
-            className="flex items-center justify-between w-full text-white hover:text-emerald-300"
-          >
-            ARBICHO 2025
-            <span className="ml-2">
-              {openSubmenu === "arbicho2025" ? "−" : "+"}
-            </span>
-          </button>
-          {openSubmenu === "arbicho2025" && (
-            <ul className="mt-2 ml-4 space-y-2">
+          <DropdownMenu open={openMenu === "arbicho2025"} onOpenChange={() => toggleMenu("arbicho2025")}>
+            <DropdownMenuTrigger asChild>
+              <button className="flex items-center justify-between w-full text-white hover:text-emerald-300">
+                ARBICHO 2025
+                <span className="ml-2">
+                  {openMenu === "arbicho2025" ? <ChevronUp size={16} /> : <ChevronDown size={16} />}
+                </span>
+              </button>
+            </DropdownMenuTrigger>
+            <DropdownMenuContent className="w-full bg-gray-800 border-gray-700">
               {arbicho2025Items.map((item) => (
-                <li key={item.title}>
+                <DropdownMenuItem key={item.title} asChild>
                   <Link
                     href={item.href}
-                    className="block text-white hover:text-emerald-300"
+                    className="block w-full text-white hover:text-emerald-300 "
                     onClick={onCloseAction}
                   >
                     {item.title}
                   </Link>
-                </li>
+                </DropdownMenuItem>
               ))}
-            </ul>
-          )}
+            </DropdownMenuContent>
+          </DropdownMenu>
         </li>
         <li className="py-2">
           <Link
@@ -306,7 +313,6 @@ export function MobileNav({ onCloseAction }: { onCloseAction: () => void }) {
             Uzbekistan
           </Link>
         </li>
-
         <li className="py-2">
           <Link
             href="/contact"
@@ -320,32 +326,3 @@ export function MobileNav({ onCloseAction }: { onCloseAction: () => void }) {
     </nav>
   );
 }
-
-const ListItem = React.forwardRef<
-  React.ElementRef<"a">,
-  React.ComponentPropsWithoutRef<"a">
->(({ className, title, children, href, ...props }, ref) => {
-  return (
-    <li className="py-2">
-      <NavigationMenuLink asChild>
-        <Link
-          ref={ref}
-          href={href ?? "#"}
-          className={cn(
-            "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-emerald-100/10 hover:text-emerald-300 focus:bg-emerald-100/10 focus:text-emerald-300",
-            className
-          )}
-          {...props}
-        >
-          <div className="text-sm font-medium leading-none">{title}</div>
-          {children && (
-            <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
-              {children}
-            </p>
-          )}
-        </Link>
-      </NavigationMenuLink>
-    </li>
-  );
-});
-ListItem.displayName = "ListItem";
