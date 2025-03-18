@@ -89,7 +89,7 @@ export default function Hero() {
                 size="lg"
                 className="bg-emerald-500 text-white hover:bg-emerald-600 cursor-pointer"
               >
-                Register Now
+                Timeline
               </Button>
               </Link>
               <Link href="/about">
