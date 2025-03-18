@@ -28,7 +28,7 @@ export interface DaySchedule {
 // Export the weekSchedule data
 export const weekSchedule: DaySchedule[] = [
   {
-    date: "June 1, 2025",
+    date: "28-May, 2025",
     day: "Day 1",
     title: "Arrival & Registration",
     description: "Teams arrive in Tashkent and complete registration",
@@ -74,7 +74,7 @@ export const weekSchedule: DaySchedule[] = [
     ],
   },
   {
-    date: "June 2, 2025",
+    date: "29-May, 2025",
     day: "Day 2",
     title: "Opening Ceremony",
     description: "Official opening of ARBIChO 2025",
@@ -140,7 +140,7 @@ export const weekSchedule: DaySchedule[] = [
     ],
   },
   {
-    date: "June 3, 2025",
+    date: "30-May, 2025",
     day: "Day 3",
     title: "Theoretical Examination",
     description: "First competition day focused on theoretical chemistry",
@@ -220,7 +220,7 @@ export const weekSchedule: DaySchedule[] = [
     ],
   },
   {
-    date: "June 4, 2025",
+    date: "31-May, 2025",
     day: "Day 4",
     title: "Practical Examination",
     description: "Second competition day focused on laboratory skills",
@@ -300,7 +300,7 @@ export const weekSchedule: DaySchedule[] = [
     ],
   },
   {
-    date: "June 5, 2025",
+    date: "June 1, 2025",
     day: "Day 5",
     title: "Research Presentations",
     description: "Third competition day focused on research and innovation",
@@ -373,7 +373,7 @@ export const weekSchedule: DaySchedule[] = [
     ],
   },
   {
-    date: "June 6, 2025",
+    date: "June 2, 2025",
     day: "Day 6",
     title: "Cultural Excursion",
     description: "Visit to historical Samarkand",
@@ -438,7 +438,7 @@ export const weekSchedule: DaySchedule[] = [
     ],
   },
   {
-    date: "June 7, 2025",
+    date: "June 3, 2025",
     day: "Day 7",
     title: "Closing Ceremony & Awards",
     description: "Final day with awards presentation and closing ceremony",
@@ -496,7 +496,7 @@ export const weekSchedule: DaySchedule[] = [
     ],
   },
   {
-    date: "June 8, 2025",
+    date: "June 4, 2025",
     day: "Day 8",
     title: "Departure Day",
     description: "Teams depart from Tashkent",

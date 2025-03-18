@@ -17,7 +17,6 @@ import {
   Bus,
   Award,
   Download,
-  Printer,
 } from "lucide-react";
 import Link from "next/link";
 
@@ -184,17 +183,14 @@ export default function SchedulePage() {
 
         {/* Download/Print Buttons */}
         <div className="mx-auto max-w-5xl mb-8 flex flex-col sm:flex-row justify-center gap-4">
-          <Button className="bg-emerald-500 text-white hover:bg-emerald-600">
+          <Link href='../docs/schedule.pdf' target="_blank">
+          
+          <Button className="bg-emerald-500 text-white hover:bg-emerald-600 cursor-pointer">
             <Download className="mr-2 h-4 w-4" />
             Download Full Schedule (PDF)
           </Button>
-          <Button
-            variant="outline"
-            className="border-emerald-400/50 text-emerald-100 hover:bg-emerald-950/50 hover:text-emerald-50"
-          >
-            <Printer className="mr-2 h-4 w-4" />
-            Print Schedule
-          </Button>
+          </Link>
+        
         </div>
 
         {/* Schedule Legend */}

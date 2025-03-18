@@ -14,7 +14,7 @@ const sponsorTiers = [
     ],
   },
 ]
-
+        
 export function SponsorsSection() {
   return (
     <section className="relative w-full bg-gradient-to-b from-[#023430] to-[#012e40] py-20" id="sponsors">

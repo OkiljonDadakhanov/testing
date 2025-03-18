@@ -5,29 +5,12 @@ import { Download, FileText } from "lucide-react";
 
 const documents = [
   {
-    title: "Competition Rules 2024",
+    title: "Competition Regulations 2025",
     category: "Rules",
-    file: "/docs/dmbook.pdf",
+    file: "/docs/rules.pdf",
     description: "Complete rulebook for ARBIChO 2024",
   },
-  {
-    title: "Safety Guidelines",
-    category: "Guidelines",
-    file: "/documents/safety-guidelines.pdf",
-    description: "Laboratory safety protocols and requirements",
-  },
-  {
-    title: "Participant Handbook",
-    category: "Guidelines",
-    file: "/documents/participant-handbook.pdf",
-    description: "Essential information for all participants",
-  },
-  {
-    title: "Evaluation Criteria",
-    category: "Rules",
-    file: "/documents/evaluation-criteria.pdf",
-    description: "Detailed scoring and evaluation system",
-  },
+  
 ];
 
 export default function RulesGuidelinesPage() {
@@ -107,7 +90,7 @@ export default function RulesGuidelinesPage() {
               </CardHeader>
               <CardContent>
                 <iframe
-                  src="/docs/dmbook.pdf"
+                  src="/docs/rules.pdf"
                   className="w-full h-[600px] rounded-lg"
                   title="Document Preview"
                 />
