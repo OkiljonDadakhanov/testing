@@ -7,27 +7,10 @@ const documents = [
   {
     title: "ARBIChO 2024 Final Results",
     category: "Results",
-    file: "/docs/dmbook.pdf",
+    file: "/docs/results.pdf",
     date: "July 15, 2024",
   },
-  {
-    title: "Team Performance Analysis 2024",
-    category: "Reports",
-    file: "/documents/team-analysis-2024.pdf",
-    date: "July 20, 2024",
-  },
-  {
-    title: "Statistical Report 2024",
-    category: "Reports",
-    file: "/documents/statistical-report-2024.pdf",
-    date: "July 25, 2024",
-  },
-  {
-    title: "Medal Distribution Summary",
-    category: "Results",
-    file: "/documents/medal-distribution-2024.pdf",
-    date: "July 16, 2024",
-  },
+  
 ];
 
 export default function ResultsReportsPage() {
@@ -107,7 +90,7 @@ export default function ResultsReportsPage() {
               </CardHeader>
               <CardContent>
                 <iframe
-                  src="/docs/dmbook.pdf"
+                  src="/docs/results.pdf"
                   className="w-full h-[600px] rounded-lg"
                   title="Document Preview"
                 />
