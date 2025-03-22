@@ -106,46 +106,6 @@ export default function RequirementsPage() {
             </CardHeader>
             <CardContent className="space-y-6">
               {/* Age Categories */}
-              <div className="space-y-4">
-                <h3 className="text-lg font-medium text-emerald-100">
-                  Age Categories
-                </h3>
-                <div className="grid gap-4 sm:grid-cols-3">
-                  <div className="space-y-2 p-4 rounded-lg bg-emerald-900/20">
-                    <h4 className="font-medium text-emerald-100">
-                      Junior Division
-                    </h4>
-                    <p className="text-sm text-emerald-100/70">
-                      Ages 14-15 years old
-                    </p>
-                    <p className="text-sm text-emerald-100/70">
-                      Born after January 1, 2010
-                    </p>
-                  </div>
-                  <div className="space-y-2 p-4 rounded-lg bg-emerald-900/20">
-                    <h4 className="font-medium text-emerald-100">
-                      Senior Division
-                    </h4>
-                    <p className="text-sm text-emerald-100/70">
-                      Ages 16-17 years old
-                    </p>
-                    <p className="text-sm text-emerald-100/70">
-                      Born after January 1, 2008
-                    </p>
-                  </div>
-                  <div className="space-y-2 p-4 rounded-lg bg-emerald-900/20">
-                    <h4 className="font-medium text-emerald-100">
-                      Advanced Division
-                    </h4>
-                    <p className="text-sm text-emerald-100/70">
-                      Ages 18-19 years old
-                    </p>
-                    <p className="text-sm text-emerald-100/70">
-                      Born after January 1, 2006
-                    </p>
-                  </div>
-                </div>
-              </div>
 
               {/* Academic Requirements */}
               <div className="space-y-4">
@@ -185,124 +145,6 @@ export default function RequirementsPage() {
                     </li>
                   ))}
                 </ul>
-              </div>
-            </CardContent>
-          </Card>
-        </div>
-
-        {/* Registration Process */}
-        <div id="registration" className="mx-auto max-w-5xl mb-16 scroll-mt-16">
-          <Card className="border-emerald-800/20 bg-emerald-900/10 backdrop-blur">
-            <CardHeader>
-              <div className="flex items-center gap-3">
-                <ClipboardCheck className="h-6 w-6 text-emerald-400" />
-                <CardTitle className="text-2xl text-emerald-100">
-                  Registration Process
-                </CardTitle>
-              </div>
-            </CardHeader>
-            <CardContent className="space-y-6">
-              {/* Timeline */}
-              <div className="space-y-4">
-                <h3 className="text-lg font-medium text-emerald-100">
-                  Important Dates
-                </h3>
-                <div className="space-y-3">
-                  {[
-                    {
-                      date: "January 15, 2025",
-                      event: "Registration Opens",
-                      status: "upcoming",
-                    },
-                    {
-                      date: "January 15 - February 1, 2025",
-                      event: "Early Bird Registration Period",
-                      status: "upcoming",
-                    },
-                    {
-                      date: "February 15, 2025",
-                      event: "Regular Registration Deadline",
-                      status: "upcoming",
-                    },
-                    {
-                      date: "February 28, 2025",
-                      event: "Document Submission Deadline",
-                      status: "upcoming",
-                    },
-                  ].map((item, index) => (
-                    <div key={index} className="flex items-start gap-2">
-                      <div className="mt-0.5">
-                        {item.status === "completed" ? (
-                          <CheckCircle className="h-5 w-5 text-emerald-500" />
-                        ) : (
-                          <AlertCircle className="h-5 w-5 text-yellow-500" />
-                        )}
-                      </div>
-                      <div>
-                        <p className="font-medium text-emerald-100">
-                          {item.event}
-                        </p>
-                        <p className="text-sm text-emerald-100/70">
-                          {item.date}
-                        </p>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-             
-              {/* Registration Steps */}
-              <div className="space-y-4">
-                <h3 className="text-lg font-medium text-emerald-100">
-                  Registration Steps
-                </h3>
-                <div className="space-y-4">
-                  {[
-                    {
-                      step: "1. National Selection",
-                      description:
-                        "Countries must complete their national selection process and identify their team members.",
-                    },
-                    {
-                      step: "2. Online Registration",
-                      description:
-                        "Complete the online registration form with team and participant information.",
-                    },
-                    {
-                      step: "3. Document Submission",
-                      description:
-                        "Submit all required documents through the online portal.",
-                    },
-                    {
-                      step: "4. Fee Payment",
-                      description:
-                        "Process registration fee payment through the secure payment system.",
-                    },
-                    {
-                      step: "5. Confirmation",
-                      description:
-                        "Receive confirmation email and access to the participant portal.",
-                    },
-                  ].map((item, index) => (
-                    <div
-                      key={index}
-                      className="flex items-start gap-4 p-4 rounded-lg bg-emerald-900/20"
-                    >
-                      <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-emerald-500 text-emerald-950 font-medium">
-                        {index + 1}
-                      </div>
-                      <div>
-                        <h4 className="font-medium text-emerald-100">
-                          {item.step}
-                        </h4>
-                        <p className="text-sm text-emerald-100/70 mt-1">
-                          {item.description}
-                        </p>
-                      </div>
-                    </div>
-                  ))}
-                </div>
               </div>
             </CardContent>
           </Card>
@@ -461,19 +303,6 @@ export default function RequirementsPage() {
                   </div>
                 ))}
               </div>
-
-              <div className="flex flex-col sm:flex-row gap-4 pt-4">
-                <Button className="bg-emerald-500 text-white hover:bg-emerald-600">
-                  <Download className="mr-2 h-4 w-4" />
-                  Download Document Templates
-                </Button>
-                <Button
-                  variant="outline"
-                  className="border-emerald-400/50 text-emerald-100 hover:bg-emerald-950/50 hover:text-emerald-50"
-                >
-                  Document Submission Guidelines
-                </Button>
-              </div>
             </CardContent>
           </Card>
         </div>
@@ -484,10 +313,6 @@ export default function RequirementsPage() {
             Ready to participate in ARBIChO 2025?
           </p>
           <div className="flex flex-col gap-4 sm:flex-row justify-center">
-            <Button className="bg-emerald-500 text-white hover:bg-emerald-600">
-              Start Registration Process
-              <ArrowRight className="ml-2 h-4 w-4" />
-            </Button>
             <Button
               variant="outline"
               className="border-emerald-400/50 text-emerald-100 hover:bg-emerald-950/50 hover:text-emerald-50"

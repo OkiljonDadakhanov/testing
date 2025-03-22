@@ -71,7 +71,6 @@ export default function Hero() {
               <div className="flex items-center gap-3 text-emerald-100/90">
                 <Medal className="h-5 w-5 text-emerald-400" />
                 <span>Medals in a 1:2:3 ratio</span>
-
               </div>
               <div className="flex items-center gap-3 text-emerald-100/90">
                 <Globe2 className="h-5 w-5 text-emerald-400" />
@@ -84,22 +83,14 @@ export default function Hero() {
             </div>
 
             <div className="flex flex-col gap-4 sm:flex-row">
-              <Link href="#timeline">
-              <Button
-                size="lg"
-                className="bg-emerald-500 text-white hover:bg-emerald-600 cursor-pointer"
-              >
-                Timeline
-              </Button>
-              </Link>
               <Link href="/about">
-              <Button
-                size="lg"
-                variant="outline"
-                className="border-emerald-400/50 text-emerald-100 hover:bg-emerald-950/50 hover:text-emerald-50 cursor-pointer"
-              >
-                Learn More
-              </Button>
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="border-emerald-400/50 text-emerald-100 hover:bg-emerald-950/50 hover:text-emerald-50 cursor-pointer"
+                >
+                  Learn More
+                </Button>
               </Link>
             </div>
           </div>
