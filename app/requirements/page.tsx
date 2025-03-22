@@ -9,10 +9,7 @@ import {
   FileText,
   Globe,
   Shield,
-  Download,
-  ArrowRight,
   CheckCircle,
-  AlertCircle,
 } from "lucide-react";
 import Link from "next/link";
 

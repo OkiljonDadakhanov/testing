@@ -12,7 +12,6 @@ import {
 } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import pic from "@/public/images/buxoro.jpg";
 
 // Past competition data
 const pastCompetitions = [
@@ -257,8 +256,6 @@ export default function PastARBIChOPage() {
                     </CardContent>
                   </Card>
                 )}
-
-               
               </TabsContent>
             ))}
           </Tabs>
