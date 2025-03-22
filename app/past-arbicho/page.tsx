@@ -12,7 +12,7 @@ import {
 } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import pic from '@/public/images/buxoro.jpg'
+import pic from "@/public/images/buxoro.jpg";
 
 // Past competition data
 const pastCompetitions = [
@@ -36,14 +36,9 @@ const pastCompetitions = [
       { name: "Turkmenistan    ", gold: 0, silver: 0, bronze: 6, total: 0 },
       { name: "Azerbaijan     ", gold: 0, silver: 0, bronze: 4, total: 4 },
       { name: "Russia ", gold: 1, silver: 2, bronze: 3, total: 6 },
-
-
-
     ],
     featuredImage: "/placeholder.svg?height=400&width=800",
   },
-  
-
 ];
 
 // Statistics
@@ -146,7 +141,7 @@ export default function PastARBIChOPage() {
                 <Card className="border-emerald-800/20 bg-emerald-900/10 backdrop-blur overflow-hidden">
                   <div className="relative h-[300px] w-full">
                     <Image
-                      src={competition.featuredImage || "/placeholder.svg"}
+                      src="/images/xiva.jpg"
                       alt={`ARBIChO ${competition.year}`}
                       fill
                       className="object-cover"
@@ -263,44 +258,12 @@ export default function PastARBIChOPage() {
                   </Card>
                 )}
 
-                {/* Gallery Preview */}
-                {competition.year !== "2020" && (
-                  <div className="space-y-4">
-                    <div className="flex items-center justify-between">
-                      <h3 className="text-xl font-semibold text-white">
-                        Photo Gallery
-                      </h3>
-                      <Link
-                        href="/gallery"
-                        className="text-emerald-400 hover:text-emerald-300 flex items-center gap-1"
-                      >
-                        <span>View all photos</span>
-                        <ArrowRight className="h-4 w-4" />
-                      </Link>
-                    </div>
-                    <div className="grid grid-cols-2 gap-4 md:grid-cols-4">
-                      {[1, 2, 3, 4].map((item) => (
-                        <div
-                          key={item}
-                          className="relative aspect-square overflow-hidden rounded-lg"
-                        >
-                          <Image
-                            src={pic}
-                            alt={`ARBIChO ${competition.year} Photo ${item}`}
-                            fill
-                            className="object-cover"
-                          />
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                )}
+               
               </TabsContent>
             ))}
           </Tabs>
         </div>
 
-       
         {/* CTA Section */}
         <div className="mx-auto max-w-3xl mt-16 text-center">
           <p className="text-emerald-100/80 mb-6">
