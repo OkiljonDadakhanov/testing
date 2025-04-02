@@ -112,14 +112,14 @@ const organizingMembers: CommitteeMember[] = [
     image: "/images/organizing/oqiljon.jpg",
   },
   {
-    name: "Ruxsora Toirova",
+    name: "Shoxbek Shukurulloev",
     role: "Committee member",
     institution: "Science Olympiad Center",
     country: "Uzbekistan",
-    bio: "Lead Specialist",
+    bio: "Software engineer",
     email: "oqiljondadaxanov@gmail.com",
     linkedin: "https://linkedin.com/in/example",
-    image: "/images/organizing/ruxsora.jpg",
+    image: "/images/organizing/shoxbek.jpg",
   },
 ]
 
