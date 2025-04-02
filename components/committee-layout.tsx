@@ -1,29 +1,34 @@
-import { Badge } from "@/components/ui/badge"
-import { Card, CardContent, CardHeader } from "@/components/ui/card"
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
-import { Button } from "@/components/ui/button"
-import { Mail, LinkedinIcon } from "lucide-react"
-import Link from "next/link"
+import { Badge } from "@/components/ui/badge";
+import { Card, CardContent, CardHeader } from "@/components/ui/card";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { Button } from "@/components/ui/button";
+import { Mail, LinkedinIcon } from "lucide-react";
+import Link from "next/link";
 
 export interface CommitteeMember {
-  name: string
-  role: string
-  institution: string
-  country: string
-  bio: string
-  image?: string
-  email?: string
-  linkedin?: string
+  name: string;
+  role: string;
+  institution: string;
+  country: string;
+  bio: string;
+  image?: string;
+  email?: string;
+  linkedin?: string;
 }
 
 interface CommitteeLayoutProps {
-  title: string
-  description: string
-  members: CommitteeMember[]
-  type: "organizing" | "scientific"
+  title: string;
+  description: string;
+  members: CommitteeMember[];
+  type: "organizing" | "scientific";
 }
 
-export function CommitteeLayout({ title, description, members, type }: CommitteeLayoutProps) {
+export function CommitteeLayout({
+  title,
+  description,
+  members,
+  type,
+}: CommitteeLayoutProps) {
   return (
     <section className="relative w-full bg-gradient-to-b from-[#011c2c] to-[#012e40] py-20">
       {/* Background elements */}
@@ -41,7 +46,9 @@ export function CommitteeLayout({ title, description, members, type }: Committee
           >
             {type === "organizing" ? "Organization" : "Scientific Committee"}
           </Badge>
-          <h1 className="mb-4 text-3xl font-bold tracking-tight text-white sm:text-4xl">{title}</h1>
+          <h1 className="mb-4 text-3xl font-bold tracking-tight text-white sm:text-4xl">
+            {title}
+          </h1>
           <p className="text-emerald-100/80">{description}</p>
         </div>
 
@@ -63,14 +70,20 @@ export function CommitteeLayout({ title, description, members, type }: Committee
                   </AvatarFallback>
                 </Avatar>
                 <div className="space-y-1">
-                  <h3 className="font-medium text-lg text-emerald-100">{member.name}</h3>
+                  <h3 className="font-medium text-lg text-emerald-100">
+                    {member.name}
+                  </h3>
                   <p className="text-sm text-emerald-100/70">{member.role}</p>
                 </div>
               </CardHeader>
               <CardContent className="space-y-4">
                 <div className="space-y-2">
-                  <p className="text-sm text-emerald-100/70">{member.institution}</p>
-                  <p className="text-sm text-emerald-100/70">{member.country}</p>
+                  <p className="text-sm text-emerald-100/70">
+                    {member.institution}
+                  </p>
+                  <p className="text-sm text-emerald-100/70">
+                    {member.country}
+                  </p>
                 </div>
                 <p className="text-sm text-emerald-100/80">{member.bio}</p>
                 <div className="flex gap-2 pt-2">
@@ -82,11 +95,12 @@ export function CommitteeLayout({ title, description, members, type }: Committee
                       asChild
                     >
                       <Link href={`mailto:${member.email}`}>
-                        <Mail className="mr-2 h-4 w-4" />
+                        <Mail className="mr-2 h-4 w-4 cursor-pointer" />
                         Email
                       </Link>
                     </Button>
                   )}
+
                   {member.linkedin && (
                     <Button
                       variant="outline"
@@ -94,7 +108,11 @@ export function CommitteeLayout({ title, description, members, type }: Committee
                       className="border-emerald-800/20 bg-emerald-900/20 text-emerald-100 hover:bg-emerald-800/20"
                       asChild
                     >
-                      <Link href={member.linkedin} target="_blank" rel="noopener noreferrer">
+                      <Link
+                        href={member.linkedin}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
                         <LinkedinIcon className="mr-2 h-4 w-4" />
                         LinkedIn
                       </Link>
@@ -108,6 +126,5 @@ export function CommitteeLayout({ title, description, members, type }: Committee
         </div>
       </div>
     </section>
-  )
+  );
 }
-

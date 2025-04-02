@@ -121,6 +121,46 @@ const scientificMembers: CommitteeMember[] = [
     linkedin: "https://linkedin.com/in/example",
     image: "/images/scientific/abdulloh.jpg",
   },
+  {
+    name: "Bulat Garifullin",
+    role: "member of Science Committee",
+    institution: "Hospital No.13 Ufa",
+    country: "Russian Federation",
+    bio: "Bulat is the author of problems at various international chemistry Olympiads for the past 20 years",
+    email: "germes1981@list.ru",
+    linkedin: "",
+    image: "/images/scientific/Bulat.jpg"
+  },
+  {
+    name: "Alex Koronatov",
+    role: "member of the scientific committee ",
+    institution: "Technion",
+    country: "Croatia",
+    bio: "Alex is organic chemist who loves teaching. He enjoys preparing and solving chemistry Olympiad tasks.",
+    email: "sashakoronatow@gmail.com",
+    linkedin: "http://linkedin.com/in/alex-koronatov-227592292",
+    image: "/images/scientific/Koronatov.jpg"
+  },
+  {
+    name: "Andrei Shved",
+    role: "member of Science Committee",
+    institution: "ETH Zurich",
+    country: "Switzerland",
+    bio: "Andrei is a dedicated teacher with rigorous scientific training and many years of experience in international Chemistry Olympiads",
+    email: "andrei.m.shved@gmail.com",
+    linkedin: "https://linkedin.com/in/andrei-shved",
+    image: "/images/scientific/Andrei.jpg"
+  },
+  {
+    name: "Prof. Vadim Eremin",
+    role: "member of the Science Committee",
+    institution: "Moscow State University, Chemistry Department",
+    country: "Russian",
+    bio: "Professor Ivanov is a professor of physical chemistry with a great experience in All-Russian and international chemistry olympiads.",
+    email: "vv_er@mail.ru",
+    linkedin: "",
+    image: "/images/scientific/Vadim.jpg"
+  }
 ]
 
 export default function ScientificCommitteePage() {
