@@ -40,7 +40,7 @@ const socialLinks = [
   {
     name: "Instagram",
     icon: <Instagram className="h-5 w-5" />,
-    href: "https://instagram.com/arbicho",
+    href: "https://www.instagram.com/fan_olimpiadalari_markazi?igsh=cDFqODRsNGx3dnk=",
     color: "hover:text-pink-500",
   },
   {
@@ -52,7 +52,7 @@ const socialLinks = [
   {
     name: "YouTube",
     icon: <Youtube className="h-5 w-5" />,
-    href: "https://youtube.com/arbicho",
+    href: "http://bit.ly/olimpdep",
     color: "hover:text-red-500",
   },
 ];
