@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { CalendarDays, Medal, Globe2, GraduationCap } from "lucide-react";
+import { CalendarDays, Medal, Globe2, GraduationCap, Download } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -92,6 +92,22 @@ export default function Hero() {
                   Learn More
                 </Button>
               </Link>
+              <a
+  href="/docs/problems.pdf"
+  download
+  className="animate-slide-in transition-transform duration-300 ease-in-out hover:scale-105"
+>
+  <Button
+    size="lg"
+    variant="outline"
+    className="group border-emerald-400/50 text-emerald-100 hover:bg-emerald-950/50 hover:text-emerald-50 cursor-pointer relative overflow-hidden"
+  >
+    <span className="absolute inset-0 opacity-10 bg-gradient-to-r from-emerald-400 via-emerald-300 to-emerald-400 blur-md group-hover:animate-pulse" />
+    <Download className="mr-2 h-5 w-5 text-emerald-300 group-hover:text-emerald-100 transition-colors" />
+    Download Preparatory Problems
+  </Button>
+</a>
+
             </div>
           </div>
 
