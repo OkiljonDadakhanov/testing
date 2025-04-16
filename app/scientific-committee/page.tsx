@@ -61,26 +61,8 @@ const scientificMembers: CommitteeMember[] = [
     linkedin: "https://linkedin.com/in/example",
     image: "/images/scientific/yunus.jpg",
   },
-  {
-    name: "Швед Андрей Михайлович",
-    role: "Research Innovation Lead",
-    institution: "Foxford ",
-    country: "Russia",
-    bio: "Teacher of Chemistry Olympiads at Foxford, Sirius OC, Center for Preparatory Programs",
-    email: "w.zhang@arbicho.com",
-    linkedin: "https://linkedin.com/in/example",
-    image: "/images/scientific/shved.jpg",
-  },
-  {
-    name: "Filip Ilievski",
-    role: "Research Innovation Lead",
-    institution: "Eidgenössische Technische Hochschule Zürich",
-    country: "Zurich, Switzerland",
-    bio: "PhD student at ETH ",
-    email: "w.zhang@arbicho.com",
-    linkedin: "https://linkedin.com/in/example",
-    image: "/images/scientific/filip.jpg",
-  },
+ 
+ 
   {
     name: "Xamidulla To’xtayev",
     role: "Committee member",
