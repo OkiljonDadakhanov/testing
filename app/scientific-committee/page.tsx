@@ -1,4 +1,7 @@
-import { CommitteeLayout, type CommitteeMember } from "@/components/committee-layout"
+import {
+  CommitteeLayout,
+  type CommitteeMember,
+} from "@/components/committee-layout";
 
 const scientificMembers: CommitteeMember[] = [
   {
@@ -29,7 +32,7 @@ const scientificMembers: CommitteeMember[] = [
     bio: "Director of Institute of Plant Chemistry. ",
     email: "y.tanaka@arbicho.com",
     linkedin: "https://linkedin.com/in/example",
-    image: "/images/scientific/acad.jpg"
+    image: "/images/scientific/acad.jpg",
   },
   {
     name: "Prof. Burkhon Elmuradov ",
@@ -61,8 +64,7 @@ const scientificMembers: CommitteeMember[] = [
     linkedin: "https://linkedin.com/in/example",
     image: "/images/scientific/yunus.jpg",
   },
- 
- 
+
   {
     name: "Xamidulla To’xtayev",
     role: "Committee member",
@@ -111,7 +113,7 @@ const scientificMembers: CommitteeMember[] = [
     bio: "Bulat is the author of problems at various international chemistry Olympiads for the past 20 years",
     email: "germes1981@list.ru",
     linkedin: "",
-    image: "/images/scientific/Bulat.jpg"
+    image: "/images/scientific/Bulat.jpg",
   },
   {
     name: "Alex Koronatov",
@@ -121,7 +123,7 @@ const scientificMembers: CommitteeMember[] = [
     bio: "Alex is organic chemist who loves teaching. He enjoys preparing and solving chemistry Olympiad tasks.",
     email: "sashakoronatow@gmail.com",
     linkedin: "http://linkedin.com/in/alex-koronatov-227592292",
-    image: "/images/scientific/Koronatov.jpg"
+    image: "/images/scientific/Koronatov.jpg",
   },
   {
     name: "Andrei Shved",
@@ -131,19 +133,19 @@ const scientificMembers: CommitteeMember[] = [
     bio: "Andrei is a dedicated teacher with rigorous scientific training and many years of experience in international Chemistry Olympiads",
     email: "andrei.m.shved@gmail.com",
     linkedin: "https://linkedin.com/in/andrei-shved",
-    image: "/images/scientific/Andrei.jpg"
+    image: "/images/scientific/Andrei.jpg",
   },
   {
     name: "Prof. Vadim Eremin",
     role: "member of the Science Committee",
     institution: "Moscow State University, Chemistry Department",
     country: "Russian",
-    bio: "Professor Ivanov is a professor of physical chemistry with a great experience in All-Russian and international chemistry olympiads.",
+    bio: "Professor Eremin is a professor of physical chemistry with a great experience in All-Russian and international chemistry olympiads.",
     email: "vv_er@mail.ru",
     linkedin: "",
-    image: "/images/scientific/Vadim.jpg"
-  }
-]
+    image: "/images/scientific/Vadim.jpg",
+  },
+];
 
 export default function ScientificCommitteePage() {
   return (
@@ -153,6 +155,5 @@ export default function ScientificCommitteePage() {
       members={scientificMembers}
       type="scientific"
     />
-  )
+  );
 }
-
