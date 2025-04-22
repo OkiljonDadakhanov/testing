@@ -15,7 +15,7 @@ const scientificMembers: CommitteeMember[] = [
     image: "/images/scientific/khamid.png",
   },
   {
-    name: "Александр Кириллович Гладилин",
+    name: "Alexander Kirilovich Gladilin",
     role: "Vice Chairman of the Scientific Committee",
     institution: "Moscow State University named after M. V. Lomonosov",
     country: "Russia",
