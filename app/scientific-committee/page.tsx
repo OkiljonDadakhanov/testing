@@ -56,7 +56,7 @@ const scientificMembers: CommitteeMember[] = [
   },
   {
     name: "Yunus Türkmen",
-    role: "Research Innovation Lead",
+    role: "Member of the Scientific Committee",
     institution: "Bilkent University ",
     country: "Ankara, Turkey",
     bio: "Professor Bilkent University Department of Chemistry",
