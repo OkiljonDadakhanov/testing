@@ -82,33 +82,52 @@ export default function Hero() {
               </div>
             </div>
 
-            <div className="flex flex-col gap-4 sm:flex-row">
-              <Link href="/about">
-                <Button
-                  size="lg"
-                  variant="outline"
-                  className="border-emerald-400/50 text-emerald-100 hover:bg-emerald-950/50 hover:text-emerald-50 cursor-pointer"
-                >
-                  Learn More
-                </Button>
-              </Link>
-              <a
-  href="/docs/problems.pdf"
-  download
-  className="animate-slide-in transition-transform duration-300 ease-in-out hover:scale-105"
->
-  <Button
-    size="lg"
-    variant="outline"
-    className="group border-emerald-400/50 text-emerald-100 hover:bg-emerald-950/50 hover:text-emerald-50 cursor-pointer relative overflow-hidden"
-  >
-    <span className="absolute inset-0 opacity-10 bg-gradient-to-r from-emerald-400 via-emerald-300 to-emerald-400 blur-md group-hover:animate-pulse" />
-    <Download className="mr-2 h-5 w-5 text-emerald-300 group-hover:text-emerald-100 transition-colors" />
-    Download Preparatory Problems
-  </Button>
-</a>
+           <div className="flex flex-col gap-4 sm:flex-row">
+  <Link href="/about">
+    <Button
+      size="lg"
+      variant="outline"
+      className="border-emerald-400/50 text-emerald-100 hover:bg-emerald-950/50 hover:text-emerald-50 cursor-pointer"
+    >
+      Learn More
+    </Button>
+  </Link>
 
-            </div>
+  {/* Preparatory Problems */}
+  <a
+    href="/docs/problems.pdf"
+    download
+    className="animate-slide-in transition-transform duration-300 ease-in-out hover:scale-105"
+  >
+    <Button
+      size="lg"
+      variant="outline"
+      className="group border-emerald-400/50 text-emerald-100 hover:bg-emerald-950/50 hover:text-emerald-50 cursor-pointer relative overflow-hidden"
+    >
+      <span className="absolute inset-0 opacity-10 bg-gradient-to-r from-emerald-400 via-emerald-300 to-emerald-400 blur-md group-hover:animate-pulse" />
+      <Download className="mr-2 h-5 w-5 text-emerald-300 group-hover:text-emerald-100 transition-colors" />
+      Download Preparatory Problems
+    </Button>
+  </a>
+
+  {/* Solutions */}
+  <a
+    href="/solutions.pdf"
+    download
+    className="animate-slide-in transition-transform duration-300 ease-in-out hover:scale-105"
+  >
+    <Button
+      size="lg"
+      variant="outline"
+      className="group border-emerald-400/50 text-emerald-100 hover:bg-emerald-950/50 hover:text-emerald-50 cursor-pointer relative overflow-hidden"
+    >
+      <span className="absolute inset-0 opacity-10 bg-gradient-to-r from-emerald-400 via-emerald-300 to-emerald-400 blur-md group-hover:animate-pulse" />
+      <Download className="mr-2 h-5 w-5 text-emerald-300 group-hover:text-emerald-100 transition-colors" />
+      Download Solutions
+    </Button>
+  </a>
+</div>
+
           </div>
 
           {/* Image container for larger screens */}
