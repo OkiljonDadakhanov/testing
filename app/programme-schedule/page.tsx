@@ -1,159 +1,147 @@
 "use client";
 
-import { useState, useMemo } from "react";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Button } from "@/components/ui/button";
 import {
-  Calendar,
-  Clock,
-  MapPin,
-  Coffee,
-  Utensils,
-  FileText,
-  Beaker,
-  Music,
-  Bus,
-  Award,
   Download,
 } from "lucide-react";
 import Link from "next/link";
 
 // Define schedule types for styling
-const ACTIVITY_TYPES = {
-  COMPETITION: "competition",
-  CEREMONY: "ceremony",
-  MEAL: "meal",
-  CULTURAL: "cultural",
-  TRANSPORTATION: "transportation",
-  FREE: "free",
-  REGISTRATION: "registration",
-};
+// const ACTIVITY_TYPES = {
+//   COMPETITION: "competition",
+//   CEREMONY: "ceremony",
+//   MEAL: "meal",
+//   CULTURAL: "cultural",
+//   TRANSPORTATION: "transportation",
+//   FREE: "free",
+//   REGISTRATION: "registration",
+// };
 
 // Define the type for activity types
-type ActivityType = (typeof ACTIVITY_TYPES)[keyof typeof ACTIVITY_TYPES];
+// type ActivityType = (typeof ACTIVITY_TYPES)[keyof typeof ACTIVITY_TYPES];
 
 // Import schedule data from a separate file to reduce component size
-import { weekSchedule } from "@/data/schedule-data";
+// import { weekSchedule } from "@/data/schedule-data";
 
 // Helper function to get icon for activity type
-const getActivityIcon = (type: ActivityType) => {
-  switch (type) {
-    case ACTIVITY_TYPES.COMPETITION:
-      return <Beaker className="h-5 w-5" />;
-    case ACTIVITY_TYPES.CEREMONY:
-      return <Award className="h-5 w-5" />;
-    case ACTIVITY_TYPES.MEAL:
-      return <Utensils className="h-5 w-5" />;
-    case ACTIVITY_TYPES.CULTURAL:
-      return <Music className="h-5 w-5" />;
-    case ACTIVITY_TYPES.TRANSPORTATION:
-      return <Bus className="h-5 w-5" />;
-    case ACTIVITY_TYPES.FREE:
-      return <Coffee className="h-5 w-5" />;
-    case ACTIVITY_TYPES.REGISTRATION:
-      return <FileText className="h-5 w-5" />;
-    default:
-      return <Clock className="h-5 w-5" />;
-  }
-};
+// const getActivityIcon = (type: ActivityType) => {
+//   switch (type) {
+//     case ACTIVITY_TYPES.COMPETITION:
+//       return <Beaker className="h-5 w-5" />;
+//     case ACTIVITY_TYPES.CEREMONY:
+//       return <Award className="h-5 w-5" />;
+//     case ACTIVITY_TYPES.MEAL:
+//       return <Utensils className="h-5 w-5" />;
+//     case ACTIVITY_TYPES.CULTURAL:
+//       return <Music className="h-5 w-5" />;
+//     case ACTIVITY_TYPES.TRANSPORTATION:
+//       return <Bus className="h-5 w-5" />;
+//     case ACTIVITY_TYPES.FREE:
+//       return <Coffee className="h-5 w-5" />;
+//     case ACTIVITY_TYPES.REGISTRATION:
+//       return <FileText className="h-5 w-5" />;
+//     default:
+//       return <Clock className="h-5 w-5" />;
+//   }
+// };
 
-// Helper function to get background color for activity type
-const getActivityColor = (type: ActivityType) => {
-  switch (type) {
-    case ACTIVITY_TYPES.COMPETITION:
-      return "bg-blue-500/10 border-blue-500/20 text-blue-500";
-    case ACTIVITY_TYPES.CEREMONY:
-      return "bg-purple-500/10 border-purple-500/20 text-purple-500";
-    case ACTIVITY_TYPES.MEAL:
-      return "bg-amber-500/10 border-amber-500/20 text-amber-500";
-    case ACTIVITY_TYPES.CULTURAL:
-      return "bg-pink-500/10 border-pink-500/20 text-pink-500";
-    case ACTIVITY_TYPES.TRANSPORTATION:
-      return "bg-emerald-500/10 border-emerald-500/20 text-emerald-500";
-    case ACTIVITY_TYPES.FREE:
-      return "bg-indigo-500/10 border-indigo-500/20 text-indigo-500";
-    case ACTIVITY_TYPES.REGISTRATION:
-      return "bg-orange-500/10 border-orange-500/20 text-orange-500";
-    default:
-      return "bg-gray-500/10 border-gray-500/20 text-gray-500";
-  }
-};
+// // Helper function to get background color for activity type
+// const getActivityColor = (type: ActivityType) => {
+//   switch (type) {
+//     case ACTIVITY_TYPES.COMPETITION:
+//       return "bg-blue-500/10 border-blue-500/20 text-blue-500";
+//     case ACTIVITY_TYPES.CEREMONY:
+//       return "bg-purple-500/10 border-purple-500/20 text-purple-500";
+//     case ACTIVITY_TYPES.MEAL:
+//       return "bg-amber-500/10 border-amber-500/20 text-amber-500";
+//     case ACTIVITY_TYPES.CULTURAL:
+//       return "bg-pink-500/10 border-pink-500/20 text-pink-500";
+//     case ACTIVITY_TYPES.TRANSPORTATION:
+//       return "bg-emerald-500/10 border-emerald-500/20 text-emerald-500";
+//     case ACTIVITY_TYPES.FREE:
+//       return "bg-indigo-500/10 border-indigo-500/20 text-indigo-500";
+//     case ACTIVITY_TYPES.REGISTRATION:
+//       return "bg-orange-500/10 border-orange-500/20 text-orange-500";
+//     default:
+//       return "bg-gray-500/10 border-gray-500/20 text-gray-500";
+//   }
+// };
 
 // Color legend items for better code organization
-const COLOR_LEGEND = [
-  { type: ACTIVITY_TYPES.COMPETITION, label: "Competition" },
-  { type: ACTIVITY_TYPES.CEREMONY, label: "Ceremony" },
-  { type: ACTIVITY_TYPES.MEAL, label: "Meals" },
-  { type: ACTIVITY_TYPES.CULTURAL, label: "Cultural" },
-  { type: ACTIVITY_TYPES.TRANSPORTATION, label: "Transportation" },
-  { type: ACTIVITY_TYPES.FREE, label: "Free Time" },
-  { type: ACTIVITY_TYPES.REGISTRATION, label: "Registration/Admin" },
-];
+// const COLOR_LEGEND = [
+//   { type: ACTIVITY_TYPES.COMPETITION, label: "Competition" },
+//   { type: ACTIVITY_TYPES.CEREMONY, label: "Ceremony" },
+//   { type: ACTIVITY_TYPES.MEAL, label: "Meals" },
+//   { type: ACTIVITY_TYPES.CULTURAL, label: "Cultural" },
+//   { type: ACTIVITY_TYPES.TRANSPORTATION, label: "Transportation" },
+//   { type: ACTIVITY_TYPES.FREE, label: "Free Time" },
+//   { type: ACTIVITY_TYPES.REGISTRATION, label: "Registration/Admin" },
+// ];
 
 // Define schedule item interface
-interface ScheduleItemType {
-  time: string;
-  activity: string;
-  description: string;
-  location: string;
-  type: string; // Use the ActivityType if defined elsewhere
-}
+// interface ScheduleItemType {
+//   time: string;
+//   activity: string;
+//   description: string;
+//   location: string;
+//   type: string; // Use the ActivityType if defined elsewhere
+// }
 
 // Define the interface for a single day's schedule
 
 // Schedule item component to improve code modularity
-const ScheduleItem = ({ item }: { item: ScheduleItemType }) => (
-  <div className="relative">
-    <div
-      className={`absolute left-[-29px] p-1 rounded-full ${getActivityColor(
-        item.type
-      )}`}
-    >
-      {getActivityIcon(item.type)}
-    </div>
-    <Card className="border-emerald-800/20 bg-emerald-900/10 backdrop-blur">
-      <CardContent className="p-4">
-        <div className="grid gap-2 sm:grid-cols-[1fr_auto]">
-          <div>
-            <h3 className="font-medium text-lg text-emerald-100">
-              {item.activity}
-            </h3>
-            <p className="text-emerald-100/80 text-sm mt-1">
-              {item.description}
-            </p>
-            <div className="flex items-center gap-2 mt-2 text-emerald-100/70 text-sm">
-              <MapPin className="h-4 w-4 text-emerald-400" />
-              <span>{item.location}</span>
-            </div>
-          </div>
-          <div className="flex items-start gap-2 sm:justify-end">
-            <Clock className="h-4 w-4 text-emerald-400 mt-1" />
-            <span className="text-emerald-100 font-medium">{item.time}</span>
-          </div>
-        </div>
-      </CardContent>
-    </Card>
-  </div>
-);
+// const ScheduleItem = ({ item }: { item: ScheduleItemType }) => (
+//   <div className="relative">
+//     <div
+//       className={`absolute left-[-29px] p-1 rounded-full ${getActivityColor(
+//         item.type
+//       )}`}
+//     >
+//       {getActivityIcon(item.type)}
+//     </div>
+//     <Card className="border-emerald-800/20 bg-emerald-900/10 backdrop-blur">
+//       <CardContent className="p-4">
+//         <div className="grid gap-2 sm:grid-cols-[1fr_auto]">
+//           <div>
+//             <h3 className="font-medium text-lg text-emerald-100">
+//               {item.activity}
+//             </h3>
+//             <p className="text-emerald-100/80 text-sm mt-1">
+//               {item.description}
+//             </p>
+//             <div className="flex items-center gap-2 mt-2 text-emerald-100/70 text-sm">
+//               <MapPin className="h-4 w-4 text-emerald-400" />
+//               <span>{item.location}</span>
+//             </div>
+//           </div>
+//           <div className="flex items-start gap-2 sm:justify-end">
+//             <Clock className="h-4 w-4 text-emerald-400 mt-1" />
+//             <span className="text-emerald-100 font-medium">{item.time}</span>
+//           </div>
+//         </div>
+//       </CardContent>
+//     </Card>
+//   </div>
+// );
 
 export default function SchedulePage() {
-  const [selectedDay, setSelectedDay] = useState(
-    weekSchedule[0]?.day || "Day 1"
-  );
+//   const [selectedDay, setSelectedDay] = useState(
+//     weekSchedule[0]?.day || "Day 1"
+//   );
 
   // Find current day data using useMemo to optimize performance
-  const currentDay = useMemo(() => {
-    return (
-      weekSchedule.find((day) => day.day === selectedDay) || weekSchedule[0]
-    );
-  }, [selectedDay]);
+  // const currentDay = useMemo(() => {
+  //   return (
+  //     weekSchedule.find((day) => day.day === selectedDay) || weekSchedule[0]
+  //   );
+  // }, [selectedDay]);
 
-  // Get current day index for navigation controls
-  const currentDayIndex = useMemo(() => {
-    return weekSchedule.findIndex((day) => day.day === selectedDay);
-  }, [selectedDay]);
+  // // Get current day index for navigation controls
+  // const currentDayIndex = useMemo(() => {
+  //   return weekSchedule.findIndex((day) => day.day === selectedDay);
+  // }, [selectedDay]);
 
   return (
     <section className="relative w-full bg-gradient-to-b from-[#011c2c] to-[#012e40]">
@@ -193,8 +181,7 @@ export default function SchedulePage() {
         
         </div>
 
-        {/* Schedule Legend */}
-        <div className="mx-auto max-w-5xl mb-8">
+        {/* <div className="mx-auto max-w-5xl mb-8">
           <Card className="border-emerald-800/20 bg-emerald-900/10 backdrop-blur">
             <CardContent className="p-4">
               <div className="flex flex-wrap gap-4 justify-center">
@@ -214,7 +201,6 @@ export default function SchedulePage() {
           </Card>
         </div>
 
-        {/* Day Tabs */}
         <div className="mx-auto max-w-5xl mb-8">
           <Tabs defaultValue={selectedDay} onValueChange={setSelectedDay}>
             <TabsList className="bg-emerald-900/30 border border-emerald-800/20 w-full flex overflow-x-auto">
@@ -234,7 +220,6 @@ export default function SchedulePage() {
           </Tabs>
         </div>
 
-        {/* Selected Day Schedule */}
         {currentDay && (
           <div className="mx-auto max-w-5xl">
             <Card className="border-emerald-800/20 bg-emerald-900/10 backdrop-blur mb-8">
@@ -259,7 +244,6 @@ export default function SchedulePage() {
               </CardHeader>
             </Card>
 
-            {/* Timeline */}
             <div className="relative pl-8 space-y-6 before:absolute before:inset-0 before:h-full before:w-[2px] before:bg-emerald-800/20 before:left-3">
               {currentDay.schedule.map(
                 (item: ScheduleItemType, index: number) => (
@@ -268,7 +252,6 @@ export default function SchedulePage() {
               )}
             </div>
 
-            {/* Navigation Buttons */}
             <div className="flex justify-between mt-8">
               {currentDayIndex > 0 && (
                 <Button
@@ -295,7 +278,7 @@ export default function SchedulePage() {
               )}
             </div>
           </div>
-        )}
+        )} */}
 
         {/* Additional Information */}
         <div className="mx-auto max-w-3xl mt-16">
