@@ -48,6 +48,10 @@ const arbicho2025Items = [
     title: "Programme Schedule",
     href: "/programme-schedule",
   },
+  {
+    title: "Press release",
+    href: "/press",
+  },
 ];
 
 const infoCenterItems = [
