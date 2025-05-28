@@ -102,7 +102,7 @@ export default function Hero() {
 
               {/* Livestream Button */}
               <a
-                href="https://youtube.com/live/OyrvrJ1SHG0?feature=share"
+                href="https://www.youtube.com/live/OyrvrJ1SHG0"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="animate-slide-in transition-transform duration-300 ease-in-out hover:scale-105"

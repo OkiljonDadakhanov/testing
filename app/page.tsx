@@ -1,13 +1,11 @@
 import { CompetitionSection } from "@/components/competetion";
 import { FAQSection } from "@/components/faq";
 import Hero from "@/components/hero";
-import { OpeningCeremony } from "@/components/livestram";
 
 export default function Home() {
   return (
     <section>
       <Hero />
-      <OpeningCeremony />
       <CompetitionSection />
       <FAQSection />
     </section>
