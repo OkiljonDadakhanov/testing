@@ -1,6 +1,13 @@
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { CalendarDays, Medal, Globe2, GraduationCap, Download } from "lucide-react";
+import {
+  CalendarDays,
+  Medal,
+  Globe2,
+  GraduationCap,
+  Download,
+  Video,
+} from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -82,52 +89,68 @@ export default function Hero() {
               </div>
             </div>
 
-           <div className="flex flex-col gap-4 sm:flex-row">
-  <Link href="/about">
-    <Button
-      size="lg"
-      variant="outline"
-      className="border-emerald-400/50 text-emerald-100 hover:bg-emerald-950/50 hover:text-emerald-50 cursor-pointer"
-    >
-      Learn More
-    </Button>
-  </Link>
+            <div className="flex flex-col gap-4 sm:flex-row sm:flex-wrap">
+              <Link href="/about">
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="border-emerald-400/50 text-emerald-100 hover:bg-emerald-950/50 hover:text-emerald-50 cursor-pointer"
+                >
+                  Learn More
+                </Button>
+              </Link>
 
-  {/* Preparatory Problems */}
-  <a
-    href="/docs/problems.pdf"
-    download
-    className="animate-slide-in transition-transform duration-300 ease-in-out hover:scale-105"
-  >
-    <Button
-      size="lg"
-      variant="outline"
-      className="group border-emerald-400/50 text-emerald-100 hover:bg-emerald-950/50 hover:text-emerald-50 cursor-pointer relative overflow-hidden"
-    >
-      <span className="absolute inset-0 opacity-10 bg-gradient-to-r from-emerald-400 via-emerald-300 to-emerald-400 blur-md group-hover:animate-pulse" />
-      <Download className="mr-2 h-5 w-5 text-emerald-300 group-hover:text-emerald-100 transition-colors" />
-      Download Preparatory Problems
-    </Button>
-  </a>
+              {/* Livestream Button */}
+              <a
+                href="https://youtube.com/live/OyrvrJ1SHG0?feature=share"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="animate-slide-in transition-transform duration-300 ease-in-out hover:scale-105"
+              >
+                <Button
+                  size="lg"
+                  className="group bg-red-600 hover:bg-red-700 text-white cursor-pointer relative overflow-hidden shadow-[0_0_20px_rgba(220,38,38,0.3)]"
+                >
+                  <span className="absolute inset-0 opacity-20 bg-gradient-to-r from-red-400 via-red-300 to-red-400 blur-md group-hover:animate-pulse" />
+                  <Video className="mr-2 h-5 w-5 text-white group-hover:text-red-100 transition-colors" />
+                  Watch Opening Ceremony Live
+                </Button>
+              </a>
 
-  {/* Solutions */}
-  <a
-    href="/solutions.pdf"
-    download
-    className="animate-slide-in transition-transform duration-300 ease-in-out hover:scale-105"
-  >
-    <Button
-      size="lg"
-      variant="outline"
-      className="group border-emerald-400/50 text-emerald-100 hover:bg-emerald-950/50 hover:text-emerald-50 cursor-pointer relative overflow-hidden"
-    >
-      <span className="absolute inset-0 opacity-10 bg-gradient-to-r from-emerald-400 via-emerald-300 to-emerald-400 blur-md group-hover:animate-pulse" />
-      <Download className="mr-2 h-5 w-5 text-emerald-300 group-hover:text-emerald-100 transition-colors" />
-      Download Solutions
-    </Button>
-  </a>
-</div>
+              {/* Preparatory Problems */}
+              <a
+                href="/docs/problems.pdf"
+                download
+                className="animate-slide-in transition-transform duration-300 ease-in-out hover:scale-105"
+              >
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="group border-emerald-400/50 text-emerald-100 hover:bg-emerald-950/50 hover:text-emerald-50 cursor-pointer relative overflow-hidden"
+                >
+                  <span className="absolute inset-0 opacity-10 bg-gradient-to-r from-emerald-400 via-emerald-300 to-emerald-400 blur-md group-hover:animate-pulse" />
+                  <Download className="mr-2 h-5 w-5 text-emerald-300 group-hover:text-emerald-100 transition-colors" />
+                  Download Preparatory Problems
+                </Button>
+              </a>
 
+              {/* Solutions */}
+              <a
+                href="/solutions.pdf"
+                download
+                className="animate-slide-in transition-transform duration-300 ease-in-out hover:scale-105"
+              >
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="group border-emerald-400/50 text-emerald-100 hover:bg-emerald-950/50 hover:text-emerald-50 cursor-pointer relative overflow-hidden"
+                >
+                  <span className="absolute inset-0 opacity-10 bg-gradient-to-r from-emerald-400 via-emerald-300 to-emerald-400 blur-md group-hover:animate-pulse" />
+                  <Download className="mr-2 h-5 w-5 text-emerald-300 group-hover:text-emerald-100 transition-colors" />
+                  Download Solutions
+                </Button>
+              </a>
+            </div>
           </div>
 
           {/* Image container for larger screens */}
