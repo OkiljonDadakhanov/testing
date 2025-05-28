@@ -1,7 +1,7 @@
-import { Badge } from "@/components/ui/badge"
-import { Card, CardContent } from "@/components/ui/card"
-import { Award } from "lucide-react"
-import Image from "next/image"
+import { Badge } from "@/components/ui/badge";
+import { Card, CardContent } from "@/components/ui/card";
+import { Award } from "lucide-react";
+import Image from "next/image";
 
 const sponsorTiers = [
   {
@@ -9,15 +9,22 @@ const sponsorTiers = [
     icon: <Award className="h-5 w-5 text-emerald-400" />,
     sponsors: [
       { name: "ChemCorp International", logo: "/organizers/olympic.png" },
-      { name: "Global Scientific Solutions", logo: "/organizers/maktabgacha.png" },
+      {
+        name: "Global Scientific Solutions",
+        logo: "/organizers/maktabgacha.png",
+      },
       { name: "TechLabs Worldwide", logo: "/organizers/agentlik.png" },
+      { name: "TechLabss", logo: "/organizers/cau.jpg" },
     ],
   },
-]
-        
+];
+
 export function SponsorsSection() {
   return (
-    <section className="relative w-full bg-gradient-to-b from-[#023430] to-[#012e40] py-20" id="sponsors">
+    <section
+      className="relative w-full bg-gradient-to-b from-[#023430] to-[#012e40] py-20"
+      id="sponsors"
+    >
       {/* Background elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute left-0 top-0 -translate-x-1/2 translate-y-1/2 h-96 w-96 rounded-full bg-emerald-500/5 blur-3xl" />
@@ -33,10 +40,13 @@ export function SponsorsSection() {
           >
             Our Supporters
           </Badge>
-          <h2 className="mb-4 text-3xl font-bold tracking-tight text-white sm:text-4xl">Sponsors & Partners</h2>
+          <h2 className="mb-4 text-3xl font-bold tracking-tight text-white sm:text-4xl">
+            Sponsors & Partners
+          </h2>
           <p className="text-emerald-100/80">
-            We are proud to collaborate with leading organizations and institutions that share our commitment to
-            advancing chemistry education.
+            We are proud to collaborate with leading organizations and
+            institutions that share our commitment to advancing chemistry
+            education.
           </p>
         </div>
 
@@ -46,7 +56,9 @@ export function SponsorsSection() {
             <div key={tier.name} className="space-y-8">
               <div className="flex items-center justify-center gap-2">
                 {tier.icon}
-                <h3 className="text-xl font-semibold text-white">{tier.name}</h3>
+                <h3 className="text-xl font-semibold text-white">
+                  {tier.name}
+                </h3>
               </div>
               <div className="flex flex-wrap justify-center items-center gap-8 max-w-4xl mx-auto">
                 {tier.sponsors.map((sponsor) => (
@@ -75,10 +87,11 @@ export function SponsorsSection() {
         {/* Supporting Text */}
         <div className="mt-20 text-center">
           <p className="text-emerald-100/80">
-            Interested in becoming a sponsor? Contact us to learn more about partnership opportunities.
+            Interested in becoming a sponsor? Contact us to learn more about
+            partnership opportunities.
           </p>
         </div>
       </div>
     </section>
-  )
+  );
 }
