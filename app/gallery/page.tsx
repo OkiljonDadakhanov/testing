@@ -88,7 +88,7 @@ const galleryMedia: GalleryMedia[] = [
     id: 7,
     src: "https://alxorazmiy.nyc3.cdn.digitaloceanspaces.com/0527.mp4",
     alt: "ARBIChO Event Opening ceremony",
-    year: "2023",
+    year: "2025",
     category: "Events",
     description: "",
     type: 'video'
@@ -97,7 +97,7 @@ const galleryMedia: GalleryMedia[] = [
     id: 8,
     src: "https://alxorazmiy.nyc3.cdn.digitaloceanspaces.com/1X0A1126_1.mp4",
     alt: "Abu Rayhan Beruni",
-    year: "2023",
+    year: "2025",
     category: "Educational",
     description: "",
     type: 'video'
@@ -106,7 +106,7 @@ const galleryMedia: GalleryMedia[] = [
     id: 9,
     src: "https://alxorazmiy.nyc3.cdn.digitaloceanspaces.com/Abu-Rayhon%20beruni-eng%202k.mp4",
     alt: "Competition Documentation",
-    year: "2023",
+    year: "2025",
     category: "Competition",
     description: "",
     type: 'video'
