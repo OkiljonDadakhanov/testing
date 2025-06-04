@@ -10,7 +10,47 @@ const documents = [
     file: "/docs/results.pdf",
     date: "July 15, 2024",
   },
-  
+  {
+    title: "ARBIChO 2025 Final Results",
+    category: "Results",
+    file: "/docs/results1.pdf",
+    date: "June 4, 2025",
+  },
+  {
+    title: "Al Beruny Theory Solutions (Official)",
+    category: "Problems",
+    file: "/problems/Al Beruny theory_sol_Official.pdf",
+    date: "ARBICHO 2025",
+    size: "2.1 MB",
+  },
+  {
+    title: "Al Beruny Practice Problems (Official)",
+    category: "Problems",
+    file: "/problems/Al Beruny practice_Official.pdf",
+    date: "ARBICHO 2025",
+    size: "621.0 KB",
+  },
+  {
+    title: "Al Beruny Practice Problems (Uzbek)",
+    category: "Problems",
+    file: "/problems/Al Beruny_practice uzbek.pdf",
+    date: "ARBICHO 2025",
+    size: "621.4 KB",
+  },
+  {
+    title: "Al Beruny Theory Problems (Uzbek)",
+    category: "Problems",
+    file: "/problems/Al Beruny theory uzbek.pdf",
+    date: "ARBICHO 2025",
+    size: "1.1 MB",
+  },
+  {
+    title: "Al Beruny Theory Final",
+    category: "Problems",
+    file: "/problems/Al Beruny theory_Final.docx",
+    date: "ARBICHO 2025",
+    size: "1.3 MB",
+  },
 ];
 
 export default function ResultsReportsPage() {
@@ -30,11 +70,10 @@ export default function ResultsReportsPage() {
             Info Center
           </Badge>
           <h1 className="mb-4 text-3xl font-bold tracking-tight text-white sm:text-5xl">
-            Results & Reports
+            Results & Problems
           </h1>
           <p className="mt-6 text-lg leading-8 text-emerald-100/80">
-            Access official results and detailed reports from ARBIChO
-            competitions.
+            Access official results and problems from ARBIChO.
           </p>
         </div>
 
@@ -61,6 +100,12 @@ export default function ResultsReportsPage() {
                         <span>{doc.category}</span>
                         <span>•</span>
                         <span>{doc.date}</span>
+                        {doc.size && (
+                          <>
+                            <span>•</span>
+                            <span>{doc.size}</span>
+                          </>
+                        )}
                       </div>
                     </div>
                   </div>
@@ -81,7 +126,7 @@ export default function ResultsReportsPage() {
           </Card>
 
           {/* PDF Preview */}
-          <div className="mt-8">
+          {/* <div className="mt-8">
             <Card className="border-emerald-800/20 bg-emerald-900/10 backdrop-blur">
               <CardHeader>
                 <CardTitle className="text-emerald-100">
@@ -96,7 +141,7 @@ export default function ResultsReportsPage() {
                 />
               </CardContent>
             </Card>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>

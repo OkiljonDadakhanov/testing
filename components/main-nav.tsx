@@ -56,7 +56,7 @@ const arbicho2025Items = [
 
 const infoCenterItems = [
   {
-    title: "Results & Reports",
+    title: "Results & Problems",
     href: "/results",
   },
   {
