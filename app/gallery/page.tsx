@@ -84,6 +84,179 @@ const galleryMedia: GalleryMedia[] = [
     description: "A distinguished speaker addresses the audience from a podium adorned with an official emblem, symbolizing leadership and unity. Behind him, an interpreter stands ready, emphasizing the event's global reach. Flags from multiple countries, held by participants in formal attire, highlight the diversity and international collaboration within the organization.",
     type: 'image'
   },
+    {
+    id: 10,
+    src: "/images/gallery/1.JPG",
+    alt: "",
+    year: "2025",
+    category: "",
+    description: "Practical exam highlights",
+    type: 'image'
+  },
+     {
+    id: 11,
+    src: "/images/gallery/2.JPG",
+    alt: "",
+    year: "2025",
+    category: "",
+    description: "Practical exam highlights",
+    type: 'image'
+  },
+       {
+    id: 12,
+    src: "/images/gallery/3.JPG",
+    alt: "",
+    year: "2025",
+    category: "",
+    description: "Practical exam highlights",
+    type: 'image'
+  },
+       {
+    id: 13,
+    src: "/images/gallery/4.JPG",
+    alt: "",
+    year: "2025",
+    category: "",
+    description: "Practical exam highlights",
+    type: 'image'
+  },
+       {
+    id: 14,
+    src: "/images/gallery/5.JPG",
+    alt: "",
+    year: "2025",
+    category: "",
+    description: "Practical exam highlights",
+    type: 'image'
+  },
+  
+        {
+    id: 15,
+    src: "/images/gallery/6.JPG",
+    alt: "",
+    year: "2025",
+    category: "",
+    description: "Practical exam highlights",
+    type: 'image'
+  },
+        {
+    id: 16,
+    src: "/images/gallery/7.JPG",
+    alt: "",
+    year: "2025",
+    category: "",
+    description: "Practical exam highlights",
+    type: 'image'
+  },
+        {
+    id: 18,
+    src: "/images/gallery/8.JPG",
+    alt: "",
+    year: "2025",
+    category: "",
+    description: "Practical exam highlights",
+    type: 'image'
+  },
+        {
+    id: 17,
+    src: "/images/gallery/9.JPG",
+    alt: "",
+    year: "2025",
+    category: "",
+    description: "Practical exam highlights",
+    type: 'image'
+  },
+  {
+  id: 122,
+  src: "/images/gallery/10.JPG",
+  alt: "",
+  year: "2025",
+  category: "",
+  description: "Samarkand trip highlights",
+  type: 'image'
+},
+{
+  id: 19,
+  src: "/images/gallery/11.JPG",
+  alt: "",
+  year: "2025",
+  category: "",
+  description: "Samarkand trip highlights",
+  type: 'image'
+},
+{
+  id: 20,
+  src: "/images/gallery/12.JPG",
+  alt: "",
+  year: "2025",
+  category: "",
+  description: "Samarkand trip highlights",
+  type: 'image'
+},
+{
+  id: 21,
+  src: "/images/gallery/13.JPG",
+  alt: "",
+  year: "2025",
+  category: "",
+  description: "Samarkand trip highlights",
+  type: 'image'
+},
+{
+  id: 22,
+  src: "/images/gallery/14.JPG",
+  alt: "",
+  year: "2025",
+  category: "",
+  description: "Samarkand trip highlights",
+  type: 'image'
+},
+{
+  id: 23,
+  src: "/images/gallery/15.JPG",
+  alt: "",
+  year: "2025",
+  category: "",
+  description: "Samarkand trip highlights",
+  type: 'image'
+},
+{
+  id: 24,
+  src: "/images/gallery/16.JPG",
+  alt: "",
+  year: "2025",
+  category: "",
+  description: "Samarkand trip highlights",
+  type: 'image'
+},
+{
+  id: 25,
+  src: "/images/gallery/17.JPG",
+  alt: "",
+  year: "2025",
+  category: "",
+  description: "Samarkand trip highlights",
+  type: 'image'
+},
+{
+  id: 26,
+  src: "/images/gallery/18.JPG",
+  alt: "",
+  year: "2025",
+  category: "",
+  description: "Samarkand trip highlights",
+  type: 'image'
+},
+{
+  id: 27,
+  src: "/images/gallery/19.JPG",
+  alt: "",
+  year: "2025",
+  category: "",
+  description: "Samarkand trip highlights",
+  type: 'image'
+}
+,
   {
     id: 7,
     src: "https://alxorazmiy.nyc3.cdn.digitaloceanspaces.com/0527.mp4",
@@ -141,6 +314,19 @@ export default function GalleryPage() {
             international collaboration and scientific excellence
           </p>
         </div>
+
+        <div className="text-center mb-8">
+  <a
+    href="https://drive.google.com/drive/folders/1Wy5sect47zpbVtZSLXNX4R0AceR_JWzy?usp=sharing"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <Button className="bg-emerald-600 hover:bg-emerald-700 text-white px-6 py-2 rounded-md shadow">
+      📁 View All Photos
+    </Button>
+  </a>
+</div>
+
 
         {/* Gallery Grid */}
         <div className="mx-auto max-w-6xl">

@@ -145,8 +145,8 @@ export function CompetitionSection() {
                   </h4>
                   <ul className="list-disc space-y-1 pl-4 text-sm text-emerald-100/80">
                     <li>Participants perform a laboratory experiment.</li>
-                    <li>Maximum score: 30 points.</li>
-                    <li>Duration: 1.5 hours (90 minutes).</li>
+                    <li>Maximum score: 40 points.</li>
+                    <li>Duration: 5 hours (300 minutes).</li>
                   </ul>
                 </div>
                 <div className="space-y-2">
@@ -156,9 +156,9 @@ export function CompetitionSection() {
                   <ul className="list-disc space-y-1 pl-4 text-sm text-emerald-100/80">
                     <li>Participants complete 8 written tasks.</li>
                     <li>
-                      Each task is worth up to 10 points (total: 80 points).
+                      There are total 8 tasks. Each task is worth up to 7.5 points (total: 60 points).
                     </li>
-                    <li>Duration: 4 hours (240 minutes).</li>
+                    <li>Duration: 5 hours (300 minutes).</li>
                   </ul>
                 </div>
                 <div className="space-y-2">
@@ -166,9 +166,9 @@ export function CompetitionSection() {
                     Overall Scoring
                   </h4>
                   <ul className="list-disc space-y-1 pl-4 text-sm text-emerald-100/80">
-                    <li>Total maximum score: 110 points.</li>
-                    <li>Round 1 contributes 30 points.</li>
-                    <li>Round 2 contributes 80 points.</li>
+                    <li>Total maximum score: 100 points.</li>
+                    <li>Round 1 contributes 40 points.</li>
+                    <li>Round 2 contributes 60 points.</li>
                   </ul>
                 </div>
               </div>
