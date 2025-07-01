@@ -19,7 +19,7 @@ const documents = [
   {
     title: "ARBIChO 2025 Theory Solutions (Official)",
     category: "Problems",
-    file: "/problems/Al Beruny theory_sol_Official.pdf",
+    file: "/docs/theory.pdf",
     date: "ARBICHO 2025",
     size: "2.1 MB",
   },
