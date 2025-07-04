@@ -283,7 +283,16 @@ const galleryMedia: GalleryMedia[] = [
     category: "Competition",
     description: "",
     type: 'video'
-  }
+  },
+  {
+    id: 10,
+    src: "https://alxorazmiy.nyc3.cdn.digitaloceanspaces.com/1.mp4",
+    alt: "Competition Documentation",
+    year: "2025",
+    category: "Competition",
+    description: "",
+    type: 'video'
+  },
 ];
 
 export default function GalleryPage() {
