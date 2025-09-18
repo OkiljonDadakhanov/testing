@@ -1,6 +1,6 @@
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Calendar, MapPin, Users, Building, Phone, Mail, Globe, Download } from 'lucide-react';
+import { Calendar, MapPin, Users, Building, Phone, Mail, Globe, Download, BookOpen } from 'lucide-react';
 
 export default function PressPage() {
   return (
@@ -27,15 +27,14 @@ export default function PressPage() {
             <Calendar className="w-5 h-5 text-emerald-400" />
             <span>May 28 - June 4, 2025</span>
           </div>
-         <a
-  href="/docs/press.docx"
-  download
-  className="inline-flex items-center gap-2 px-6 py-3 bg-emerald-600 hover:bg-emerald-700 text-white rounded-lg transition-colors font-medium"
->
-  <Download className="w-4 h-4" />
-  Download Uzbek Version
-</a>
-
+          <a
+            href="/docs/press.docx"
+            download
+            className="inline-flex items-center gap-2 px-6 py-3 bg-emerald-600 hover:bg-emerald-700 text-white rounded-lg transition-colors font-medium"
+          >
+            <Download className="w-4 h-4" />
+            Download Uzbek Version
+          </a>
         </div>
 
         {/* Introduction */}
@@ -86,6 +85,52 @@ export default function PressPage() {
                 The events will be attended by officials from the Ministry of Preschool and School Education of the 
                 Republic of Uzbekistan, international guests, and diplomatic representatives from the participating countries.
               </p>
+            </CardContent>
+          </Card>
+        </div>
+
+        {/* Report Book (PDF) */}
+        <div className="mx-auto max-w-5xl mb-8">
+          <Card className="border-emerald-800/20 bg-emerald-900/10 backdrop-blur">
+            <CardHeader className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+              <CardTitle className="text-emerald-100 flex items-center gap-3">
+                <BookOpen className="w-5 h-5 text-emerald-400" />
+                Report Book
+              </CardTitle>
+              <div className="flex gap-3">
+                <a
+                  href="/docs/report.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-3 py-2 rounded-md bg-emerald-600 text-white hover:bg-emerald-700 transition"
+                >
+                  <Globe className="w-4 h-4" />
+                  Open in new tab
+                </a>
+                <a
+                  href="/docs/report.pdf"
+                  download
+                  className="inline-flex items-center gap-2 px-3 py-2 rounded-md bg-emerald-600 text-white hover:bg-emerald-700 transition"
+                >
+                  <Download className="w-4 h-4" />
+                  Download PDF
+                </a>
+              </div>
+            </CardHeader>
+            <CardContent className="p-0">
+              <iframe
+                src="/docs/report.pdf#view=FitH"
+                title="ARBICHO Report Book"
+                className="w-full h-[80vh] rounded-b-lg border-t border-emerald-800/20"
+                loading="lazy"
+              />
+              {/* Fallback text for devices that block inline PDF */}
+              <div className="p-4 text-center text-emerald-100/70 text-sm">
+                If the PDF doesn’t display,{" "}
+                <a href="/docs/report.pdf" target="_blank" rel="noopener noreferrer" className="text-emerald-300 underline hover:text-emerald-200">
+                  open it in a new tab
+                </a>.
+              </div>
             </CardContent>
           </Card>
         </div>
