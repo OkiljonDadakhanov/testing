@@ -5,8 +5,8 @@ import {
   Medal,
   Globe2,
   GraduationCap,
-  Download,
-  Video,
+  MapPin,
+  Users,
 } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -34,24 +34,23 @@ export default function Hero() {
         <div className="animate-float absolute bottom-20 left-[20%] h-20 w-20 rounded-full border-2 border-cyan-400/30 bg-cyan-500/10 shadow-[0_0_15px_rgba(34,211,238,0.2)]" />
       </div>
 
-      <div className="container relative mx-auto px-6 md:px-12 lg:px-16 py-20 flex justify-center">
-        <div className="lg:grid lg:grid-cols-2 lg:gap-8">
-          <div className="flex flex-col justify-center space-y-8">
-            <div className="space-y-6">
+      <div className="container relative mx-auto px-4 sm:px-6 md:px-12 lg:px-16 py-12 sm:py-16 lg:py-20 flex items-center min-h-[calc(90vh-80px)]">
+        <div className="w-full lg:grid lg:grid-cols-2 lg:gap-12 xl:gap-16">
+          <div className="flex flex-col justify-center space-y-6 sm:space-y-8">
+            <div className="space-y-4 sm:space-y-6">
               <Badge
                 variant="secondary"
                 className="w-fit animate-fade-in bg-emerald-500/10 text-emerald-300 hover:bg-emerald-500/20"
               >
                 International Chemistry Olympiad
               </Badge>
-              <h1 className="animate-fade-in text-4xl font-bold tracking-tight text-white sm:text-6xl">
-                ARBIChO 2025
+              <h1 className="animate-fade-in text-3xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl">
+                ARBIChO 2026
               </h1>
             </div>
 
-            {/* Image moved here for mobile, hidden on larger screens */}
             <div className="lg:hidden">
-              <div className="relative mx-auto h-[300px] w-full max-w-[500px] overflow-hidden rounded-2xl bg-gradient-to-br from-emerald-600/20 to-emerald-900/20 backdrop-blur shadow-[0_0_30px_rgba(16,185,129,0.1)] sm:h-[400px]">
+              <div className="relative mx-auto h-[250px] w-full max-w-[500px] overflow-hidden rounded-2xl bg-gradient-to-br from-emerald-600/20 to-emerald-900/20 backdrop-blur shadow-[0_0_30px_rgba(16,185,129,0.1)] sm:h-[350px]">
                 <Image
                   src="/images/main-page.jpg"
                   alt="Scientist working in a laboratory"
@@ -63,99 +62,63 @@ export default function Hero() {
               </div>
             </div>
 
-            <div className="space-y-6">
-              <p className="max-w-xl text-xl text-emerald-100/80">
-                Join the prestigious Abu Rayhan Biruni International Chemistry
-                Olympiad and showcase your chemistry prowess on a global stage.
-              </p>
-            </div>
+            <p className="max-w-xl text-lg sm:text-xl text-emerald-100/80">
+              Join the prestigious Abu Rayhan Biruni International Chemistry
+              Olympiad and showcase your chemistry prowess on a global stage.
+            </p>
 
-            <div className="grid gap-6 sm:grid-cols-2">
+            <div className="grid gap-4 sm:gap-5 grid-cols-1 sm:grid-cols-2">
               <div className="flex items-center gap-3 text-emerald-100/90">
-                <CalendarDays className="h-5 w-5 text-emerald-400" />
-                <span>May 28 to June 4, 2025</span>
+                <CalendarDays className="h-5 w-5 shrink-0 text-emerald-400" />
+                <span>November 3–10, 2026</span>
               </div>
               <div className="flex items-center gap-3 text-emerald-100/90">
-                <Medal className="h-5 w-5 text-emerald-400" />
+                <Globe2 className="h-5 w-5 shrink-0 text-emerald-400" />
+                <span>30+ Countries</span>
+              </div>
+              <div className="flex items-center gap-3 text-emerald-100/90">
+                <MapPin className="h-5 w-5 shrink-0 text-emerald-400" />
+                <span>Karakalpakistan Republic, Uzbekistan</span>
+              </div>
+              <div className="flex items-center gap-3 text-emerald-100/90">
+                <Users className="h-5 w-5 shrink-0 text-emerald-400" />
+                <span>4 Students + 2 Team Leaders</span>
+              </div>
+              <div className="flex items-center gap-3 text-emerald-100/90">
+                <Medal className="h-5 w-5 shrink-0 text-emerald-400" />
                 <span>Medals in a 1:2:3 ratio</span>
               </div>
               <div className="flex items-center gap-3 text-emerald-100/90">
-                <Globe2 className="h-5 w-5 text-emerald-400" />
-                <span>16 Countries</span>
-              </div>
-              <div className="flex items-center gap-3 text-emerald-100/90">
-                <GraduationCap className="h-5 w-5 text-emerald-400" />
+                <GraduationCap className="h-5 w-5 shrink-0 text-emerald-400" />
                 <span>Ages under 18 Eligible</span>
               </div>
             </div>
 
-            <div className="flex flex-col gap-4 sm:flex-row sm:flex-wrap">
+            <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:gap-4">
               <Link href="/about">
                 <Button
                   size="lg"
                   variant="outline"
-                  className="border-emerald-400/50 text-emerald-100 hover:bg-emerald-950/50 hover:text-emerald-50 cursor-pointer"
+                  className="w-full sm:w-auto border-emerald-400/50 text-emerald-100 hover:bg-emerald-950/50 hover:text-emerald-50 cursor-pointer"
                 >
                   Learn More
                 </Button>
               </Link>
 
-              {/* Livestream Button */}
-              <a
-                href="https://www.youtube.com/live/OyrvrJ1SHG0"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="animate-slide-in transition-transform duration-300 ease-in-out hover:scale-105"
-              >
-                <Button
-                  size="lg"
-                  className="group bg-red-600 hover:bg-red-700 text-white cursor-pointer relative overflow-hidden shadow-[0_0_20px_rgba(220,38,38,0.3)]"
-                >
-                  <span className="absolute inset-0 opacity-20 bg-gradient-to-r from-red-400 via-red-300 to-red-400 blur-md group-hover:animate-pulse" />
-                  <Video className="mr-2 h-5 w-5 text-white group-hover:text-red-100 transition-colors" />
-                  Watch Opening Ceremony Live
-                </Button>
-              </a>
-
-              {/* Preparatory Problems */}
-              <a
-                href="/docs/problems.pdf"
-                download
-                className="animate-slide-in transition-transform duration-300 ease-in-out hover:scale-105"
-              >
+              <Link href="/preparatory-problems">
                 <Button
                   size="lg"
                   variant="outline"
-                  className="group border-emerald-400/50 text-emerald-100 hover:bg-emerald-950/50 hover:text-emerald-50 cursor-pointer relative overflow-hidden"
+                  className="w-full sm:w-auto border-emerald-400/50 text-emerald-100 hover:bg-emerald-950/50 hover:text-emerald-50 cursor-pointer"
                 >
-                  <span className="absolute inset-0 opacity-10 bg-gradient-to-r from-emerald-400 via-emerald-300 to-emerald-400 blur-md group-hover:animate-pulse" />
-                  <Download className="mr-2 h-5 w-5 text-emerald-300 group-hover:text-emerald-100 transition-colors" />
-                  Download Preparatory Problems
+                  Preparatory Problems &amp; Solutions
                 </Button>
-              </a>
-
-              {/* Solutions */}
-              <a
-                href="/solutions.pdf"
-                download
-                className="animate-slide-in transition-transform duration-300 ease-in-out hover:scale-105"
-              >
-                <Button
-                  size="lg"
-                  variant="outline"
-                  className="group border-emerald-400/50 text-emerald-100 hover:bg-emerald-950/50 hover:text-emerald-50 cursor-pointer relative overflow-hidden"
-                >
-                  <span className="absolute inset-0 opacity-10 bg-gradient-to-r from-emerald-400 via-emerald-300 to-emerald-400 blur-md group-hover:animate-pulse" />
-                  <Download className="mr-2 h-5 w-5 text-emerald-300 group-hover:text-emerald-100 transition-colors" />
-                  Download Solutions
-                </Button>
-              </a>
+              </Link>
             </div>
           </div>
 
-          {/* Image container for larger screens */}
-          <div className="hidden items-center justify-center lg:flex lg:justify-start">
-            <div className="relative h-[500px] w-full max-w-[500px] overflow-hidden rounded-2xl bg-gradient-to-br from-emerald-600/20 to-emerald-900/20 backdrop-blur shadow-[0_0_30px_rgba(16,185,129,0.1)]">
+          <div className="hidden items-center justify-center lg:flex">
+            <div className="relative h-[450px] xl:h-[500px] w-full max-w-[500px] overflow-hidden rounded-2xl bg-gradient-to-br from-emerald-600/20 to-emerald-900/20 backdrop-blur shadow-[0_0_30px_rgba(16,185,129,0.1)]">
               <Image
                 src="/images/main-page.jpg"
                 alt="Scientist working in a laboratory"

@@ -15,15 +15,15 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-emerald-800/10 bg-gradient-to-b from-emerald-900/95 to-[#011c2c]/95 backdrop-blur supports-[backdrop-filter]:from-emerald-900/80 supports-[backdrop-filter]:to-[#011c2c]/80">
-      <div className="container flex items-center justify-between py-4 min-h-[120px] px-4 md:px-6 m-auto">
+      <div className="container flex items-center justify-between py-3 min-h-[80px] px-4 md:px-6 m-auto">
         {/* Logo on the Left */}
-        <Link href="/" className="flex items-center z-10">
+        <Link href="/" className="flex items-center shrink-0 z-10">
           <Image
             src="/logo/logowhite.png"
-            width={100} 
-            height={64} 
+            width={60}
+            height={40}
             alt="logo of ARBIChO"
-            className="object-contain"
+            className="object-contain h-10 w-auto"
           />
         </Link>
 

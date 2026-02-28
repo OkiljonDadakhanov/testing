@@ -35,7 +35,7 @@ const competitionItems = [
   },
 ];
 
-const arbicho2025Items = [
+const arbicho2026Items = [
   {
     title: "Organizing Committee",
     href: "/organizing-committee",
@@ -67,12 +67,12 @@ const infoCenterItems = [
 
 export function MainNav() {
   return (
-    <NavigationMenu className="max-w-none justify-end">
+    <NavigationMenu>
       <NavigationMenuList className="space-x-4">
         <NavigationMenuItem className="px-1">
           <Link href="/" legacyBehavior passHref>
             <NavigationMenuLink
-              className={cn(navigationMenuTriggerStyle(), "px-4 w-full")}
+              className={cn(navigationMenuTriggerStyle(), "px-4")}
             >
               Home
             </NavigationMenuLink>
@@ -155,11 +155,11 @@ export function MainNav() {
 
         <NavigationMenuItem className="px-1">
           <NavigationMenuTrigger className="cursor-pointer px-4 text-1xl py-2 rounded-lg hover:bg-gray-700 transition-colors">
-            ARBICHO 2025
+            ARBICHO 2026
           </NavigationMenuTrigger>
           <NavigationMenuContent>
             <div className="grid w-[400px] gap-3 p-4">
-              {arbicho2025Items.map((item) => (
+              {arbicho2026Items.map((item) => (
                 <NavigationMenuLink key={item.title} asChild>
                   <Link
                     href={item.href}
@@ -311,14 +311,14 @@ export function MobileNav({ onCloseAction }: { onCloseAction: () => void }) {
         </li>
         <li className="py-2">
           <DropdownMenu
-            open={openMenu === "arbicho2025"}
-            onOpenChange={() => toggleMenu("arbicho2025")}
+            open={openMenu === "arbicho2026"}
+            onOpenChange={() => toggleMenu("arbicho2026")}
           >
             <DropdownMenuTrigger asChild>
               <button className="flex items-center justify-between w-full text-white hover:text-emerald-300">
-                ARBICHO 2025
+                ARBICHO 2026
                 <span className="ml-2">
-                  {openMenu === "arbicho2025" ? (
+                  {openMenu === "arbicho2026" ? (
                     <ChevronUp size={16} />
                   ) : (
                     <ChevronDown size={16} />
@@ -327,7 +327,7 @@ export function MobileNav({ onCloseAction }: { onCloseAction: () => void }) {
               </button>
             </DropdownMenuTrigger>
             <DropdownMenuContent className="w-full bg-gray-800 border-gray-700">
-              {arbicho2025Items.map((item) => (
+              {arbicho2026Items.map((item) => (
                 <DropdownMenuItem key={item.title} asChild>
                   <Link
                     href={item.href}
