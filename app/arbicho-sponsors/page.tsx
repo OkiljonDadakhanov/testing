@@ -5,6 +5,7 @@ export default function Foundation() {
   return (
     <div>
       <SponsorsSection />
+      
     </div>
   )
 }
